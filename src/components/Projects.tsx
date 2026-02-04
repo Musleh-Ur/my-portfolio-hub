@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
-import { ExternalLink, Github, TrendingUp, BarChart, Database, Brain, FileSpreadsheet, Snowflake, Code, Table } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { 
+  ExternalLink, Github, TrendingUp, BarChart, Database, Brain, 
+  FileSpreadsheet, Snowflake, Code, Table, Star 
+} from "lucide-react";
 
 interface Project {
   id: number;
@@ -112,6 +114,30 @@ const projects: Project[] = [
   },
 ];
 
+const skillFilters = [
+  { id: "all", label: "All Projects", icon: Star, color: "primary" },
+  { id: "python", label: "Python", icon: Code, color: "python" },
+  { id: "r", label: "R Language", icon: Table, color: "r" },
+  { id: "excel", label: "Excel", icon: FileSpreadsheet, color: "excel" },
+  { id: "powerbi", label: "Power BI", icon: BarChart, color: "powerbi" },
+  { id: "gsheets", label: "Google Sheets", icon: Table, color: "gsheets" },
+  { id: "ml", label: "Machine Learning", icon: Brain, color: "ml" },
+  { id: "sql", label: "SQL", icon: Database, color: "sql" },
+  { id: "snowflake", label: "SnowFlake", icon: Snowflake, color: "snowflake" },
+];
+
+const skillColors: Record<string, { border: string; bg: string; text: string }> = {
+  primary: { border: "border-primary", bg: "bg-primary", text: "text-primary" },
+  python: { border: "border-[#3572A5]", bg: "bg-[#3572A5]", text: "text-[#3572A5]" },
+  r: { border: "border-[#276DC3]", bg: "bg-[#276DC3]", text: "text-[#276DC3]" },
+  excel: { border: "border-[#217346]", bg: "bg-[#217346]", text: "text-[#217346]" },
+  powerbi: { border: "border-[#F2C811]", bg: "bg-[#F2C811]", text: "text-[#F2C811]" },
+  gsheets: { border: "border-[#34A853]", bg: "bg-[#34A853]", text: "text-[#34A853]" },
+  ml: { border: "border-[#FF6F61]", bg: "bg-[#FF6F61]", text: "text-[#FF6F61]" },
+  sql: { border: "border-[#00758F]", bg: "bg-[#00758F]", text: "text-[#00758F]" },
+  snowflake: { border: "border-[#29A3D9]", bg: "bg-[#29A3D9]", text: "text-[#29A3D9]" },
+};
+
 const skillIcons: Record<string, React.ComponentType<{ className?: string }>> = {
   python: Code,
   r: Table,
@@ -145,11 +171,8 @@ const skillTagColors: Record<string, string> = {
   snowflake: "bg-[#29A3D9]/20 text-[#29A3D9] border-[#29A3D9]/30",
 };
 
-interface ProjectsProps {
-  activeSkill: string;
-}
-
-const Projects = ({ activeSkill }: ProjectsProps) => {
+const Projects = () => {
+  const [activeSkill, setActiveSkill] = useState("all");
   const [visibleProjects, setVisibleProjects] = useState<Project[]>(projects);
 
   useEffect(() => {
@@ -170,10 +193,44 @@ const Projects = ({ activeSkill }: ProjectsProps) => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             My <span className="text-gradient">Projects</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
+            Real-world data science projects showcasing machine learning, 
+            visualization, and database expertise.
+          </p>
+
+          {/* Skill Filter Buttons */}
+          <div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-4">
+            {skillFilters.map((skill) => {
+              const colors = skillColors[skill.color];
+              const isActive = activeSkill === skill.id;
+              
+              return (
+                <button
+                  key={skill.id}
+                  onClick={() => setActiveSkill(skill.id)}
+                  className={`
+                    group relative px-3 py-2 md:px-5 md:py-2.5 rounded-xl font-medium text-xs md:text-sm
+                    flex items-center gap-1.5 md:gap-2 transition-all duration-300
+                    border-2 ${colors.border}
+                    ${isActive 
+                      ? `${colors.bg} text-background shadow-lg scale-105` 
+                      : `bg-secondary/50 ${colors.text} hover:bg-secondary hover:scale-102`
+                    }
+                  `}
+                  aria-pressed={isActive}
+                >
+                  <skill.icon className="w-3.5 h-3.5 md:w-4 md:h-4" />
+                  <span>{skill.label}</span>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Filter Status */}
+          <p className="text-sm text-muted-foreground">
             {activeSkill === "all" 
-              ? "Showing all projects. Click a skill above to filter."
-              : `Showing ${visibleProjects.length} project${visibleProjects.length !== 1 ? 's' : ''} using ${skillLabels[activeSkill] || activeSkill}.`
+              ? `Showing all ${visibleProjects.length} projects`
+              : `Showing ${visibleProjects.length} project${visibleProjects.length !== 1 ? 's' : ''} with ${skillLabels[activeSkill]}`
             }
           </p>
         </div>
