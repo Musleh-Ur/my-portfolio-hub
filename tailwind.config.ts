@@ -13,6 +13,9 @@ export default {
       },
     },
     extend: {
+      scale: {
+        '102': '1.02',
+      },
       fontFamily: {
         sans: ['Space Grotesk', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
