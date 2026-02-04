@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Skills from "@/components/Skills";
@@ -8,15 +7,13 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 const Index = () => {
-  const [activeSkill, setActiveSkill] = useState("all");
-
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
       <main>
         <Hero />
-        <Skills activeSkill={activeSkill} setActiveSkill={setActiveSkill} />
-        <Projects activeSkill={activeSkill} />
+        <Skills />
+        <Projects />
         <Education />
         <Contact />
       </main>
