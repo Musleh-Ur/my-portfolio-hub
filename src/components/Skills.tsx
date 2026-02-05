@@ -1,108 +1,124 @@
-import { Code, Database, BarChart3, Brain, FileSpreadsheet, Server } from "lucide-react";
+import { Code, Database, BarChart3, Brain, FileSpreadsheet, Server, TrendingUp } from "lucide-react";
 
 const skills = [
   {
     category: "Programming & Querying",
     icon: Code,
-    items: [
-      { name: "Python", emoji: "🐍" },
-      { name: "R", emoji: "📊" },
-      { name: "SQL", emoji: "🗃️" },
-      { name: "DAX", emoji: "📐" },
-    ],
+    color: "from-blue-500/20 to-cyan-500/20",
+    borderColor: "group-hover:border-blue-500/50",
+    items: ["Python", "R", "SQL", "DAX"],
   },
   {
     category: "ML & Data Science",
     icon: Brain,
-    items: [
-      { name: "Scikit-learn", emoji: "🤖" },
-      { name: "TensorFlow", emoji: "🧠" },
-      { name: "Pandas", emoji: "🐼" },
-      { name: "NumPy", emoji: "🔢" },
-    ],
+    color: "from-purple-500/20 to-pink-500/20",
+    borderColor: "group-hover:border-purple-500/50",
+    items: ["Scikit-learn", "TensorFlow", "Pandas", "NumPy"],
   },
   {
     category: "Visualization",
     icon: BarChart3,
-    items: [
-      { name: "Power BI", emoji: "📊" },
-      { name: "Matplotlib", emoji: "📈" },
-      { name: "Seaborn", emoji: "🌊" },
-      { name: "ggplot", emoji: "📉" },
-    ],
+    color: "from-emerald-500/20 to-teal-500/20",
+    borderColor: "group-hover:border-emerald-500/50",
+    items: ["Power BI", "Matplotlib", "Seaborn", "ggplot"],
   },
   {
     category: "Database Tools",
     icon: Database,
-    items: [
-      { name: "SQL Server", emoji: "🗄️" },
-      { name: "MySQL", emoji: "🐬" },
-      { name: "SnowFlake", emoji: "❄️" },
-    ],
+    color: "from-orange-500/20 to-amber-500/20",
+    borderColor: "group-hover:border-orange-500/50",
+    items: ["SQL Server", "MySQL", "SnowFlake"],
   },
   {
     category: "Analytics Tools",
     icon: FileSpreadsheet,
-    items: [
-      { name: "MS Excel", emoji: "📗" },
-      { name: "Google Sheets", emoji: "📋" },
-      { name: "Power Query", emoji: "⚡" },
-      { name: "JASP", emoji: "📊" },
-      { name: "SPSS", emoji: "📈" },
-    ],
+    color: "from-green-500/20 to-lime-500/20",
+    borderColor: "group-hover:border-green-500/50",
+    items: ["MS Excel", "Google Sheets", "Power Query", "JASP", "SPSS"],
   },
   {
     category: "Core Competencies",
-    icon: Server,
-    items: [
-      { name: "Data Cleaning", emoji: "🧹" },
-      { name: "Feature Engineering", emoji: "⚙️" },
-      { name: "Forecasting", emoji: "🔮" },
-      { name: "ETL", emoji: "🔄" },
-    ],
+    icon: TrendingUp,
+    color: "from-rose-500/20 to-red-500/20",
+    borderColor: "group-hover:border-rose-500/50",
+    items: ["Data Cleaning", "Feature Engineering", "Forecasting", "ETL"],
   },
 ];
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-24 relative">
+    <section id="skills" className="py-24 relative overflow-hidden">
+      {/* Background elements */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(var(--primary)/0.05)_0%,transparent_50%)]" />
+      <div className="absolute top-1/2 left-0 w-72 h-72 bg-primary/5 rounded-full blur-3xl -translate-y-1/2" />
+      <div className="absolute top-1/3 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
       
       <div className="section-container relative z-10">
+        {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-primary font-mono text-sm mb-3">What I Work With</p>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
+            <Code className="w-4 h-4 text-primary" />
+            <span className="text-primary font-mono text-sm">Technical Expertise</span>
+          </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Technical <span className="text-gradient">Skills</span>
+            Skills & <span className="text-gradient">Technologies</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
             A comprehensive toolkit for end-to-end data science workflows, 
             from data wrangling to model deployment.
           </p>
         </div>
 
+        {/* Skills Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skills.map((skill, index) => (
             <div
               key={skill.category}
-              className="group p-6 rounded-xl bg-gradient-card border border-border/50 hover:border-primary/30 transition-all duration-500 hover:shadow-glow"
+              className={`group relative p-6 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50 ${skill.borderColor} transition-all duration-500 hover:shadow-lg hover:-translate-y-1`}
+              style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="flex items-center gap-4 mb-4">
-                <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors duration-300">
-                  <skill.icon className="w-6 h-6" />
+              {/* Gradient background on hover */}
+              <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${skill.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+              
+              <div className="relative z-10">
+                {/* Category header */}
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="p-2.5 rounded-xl bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors duration-300 ring-1 ring-primary/20">
+                    <skill.icon className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-base text-foreground">{skill.category}</h3>
+                    <p className="text-xs text-muted-foreground">{skill.items.length} technologies</p>
+                  </div>
                 </div>
-                <h3 className="font-semibold text-lg">{skill.category}</h3>
+                
+                {/* Skills list */}
+                <div className="flex flex-wrap gap-2">
+                  {skill.items.map((item, itemIndex) => (
+                    <span
+                      key={item}
+                      className="px-3 py-1.5 text-sm font-medium rounded-lg bg-secondary/80 text-muted-foreground hover:text-foreground hover:bg-primary/15 transition-all duration-300 border border-transparent hover:border-primary/20"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <div className="flex flex-wrap gap-2">
-                {skill.items.map((item) => (
-                  <span
-                    key={item.name}
-                    className="px-3 py-1.5 text-sm rounded-full bg-secondary text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors duration-300 flex items-center gap-1.5"
-                  >
-                    <span>{item.emoji}</span>
-                    {item.name}
-                  </span>
-                ))}
-              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom stats */}
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4">
+          {[
+            { label: "Languages", value: "4+" },
+            { label: "ML Frameworks", value: "4+" },
+            { label: "Visualization Tools", value: "4+" },
+            { label: "Years Experience", value: "3+" },
+          ].map((stat) => (
+            <div key={stat.label} className="text-center p-4 rounded-xl bg-secondary/30 border border-border/30">
+              <p className="text-2xl font-bold text-primary mb-1">{stat.value}</p>
+              <p className="text-sm text-muted-foreground">{stat.label}</p>
             </div>
           ))}
         </div>
