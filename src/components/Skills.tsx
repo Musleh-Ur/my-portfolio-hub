@@ -4,32 +4,62 @@ const skills = [
   {
     category: "Programming & Querying",
     icon: Code,
-    items: ["Python", "R", "SQL", "DAX"],
+    items: [
+      { name: "Python", emoji: "🐍" },
+      { name: "R", emoji: "📊" },
+      { name: "SQL", emoji: "🗃️" },
+      { name: "DAX", emoji: "📐" },
+    ],
   },
   {
     category: "ML & Data Science",
     icon: Brain,
-    items: ["Scikit-learn", "TensorFlow", "Pandas", "NumPy"],
+    items: [
+      { name: "Scikit-learn", emoji: "🤖" },
+      { name: "TensorFlow", emoji: "🧠" },
+      { name: "Pandas", emoji: "🐼" },
+      { name: "NumPy", emoji: "🔢" },
+    ],
   },
   {
     category: "Visualization",
     icon: BarChart3,
-    items: ["Power BI", "Matplotlib", "Seaborn", "ggplot"],
+    items: [
+      { name: "Power BI", emoji: "📊" },
+      { name: "Matplotlib", emoji: "📈" },
+      { name: "Seaborn", emoji: "🌊" },
+      { name: "ggplot", emoji: "📉" },
+    ],
   },
   {
     category: "Database Tools",
     icon: Database,
-    items: ["SQL Server", "MySQL", "SnowFlake", "Power Query"],
+    items: [
+      { name: "SQL Server", emoji: "🗄️" },
+      { name: "MySQL", emoji: "🐬" },
+      { name: "SnowFlake", emoji: "❄️" },
+    ],
   },
   {
     category: "Analytics Tools",
     icon: FileSpreadsheet,
-    items: ["MS Excel", "Google Sheets", "Statistical Modeling"],
+    items: [
+      { name: "MS Excel", emoji: "📗" },
+      { name: "Google Sheets", emoji: "📋" },
+      { name: "Power Query", emoji: "⚡" },
+      { name: "JASP", emoji: "📊" },
+      { name: "SPSS", emoji: "📈" },
+    ],
   },
   {
     category: "Core Competencies",
     icon: Server,
-    items: ["Data Cleaning", "Feature Engineering", "Forecasting", "ETL"],
+    items: [
+      { name: "Data Cleaning", emoji: "🧹" },
+      { name: "Feature Engineering", emoji: "⚙️" },
+      { name: "Forecasting", emoji: "🔮" },
+      { name: "ETL", emoji: "🔄" },
+    ],
   },
 ];
 
@@ -65,10 +95,11 @@ const Skills = () => {
               <div className="flex flex-wrap gap-2">
                 {skill.items.map((item) => (
                   <span
-                    key={item}
-                    className="px-3 py-1.5 text-sm rounded-full bg-secondary text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors duration-300"
+                    key={item.name}
+                    className="px-3 py-1.5 text-sm rounded-full bg-secondary text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors duration-300 flex items-center gap-1.5"
                   >
-                    {item}
+                    <span>{item.emoji}</span>
+                    {item.name}
                   </span>
                 ))}
               </div>

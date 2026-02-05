@@ -1,14 +1,18 @@
 import { GraduationCap, Award, Calendar } from "lucide-react";
+import juLogo from "@/assets/ju-logo.png";
+import kuLogo from "@/assets/ku-logo.png";
 
 const education = [
   {
     degree: "Masters in Applied Statistics and Data Science",
     institution: "Jahangirnagar University",
+    logo: juLogo,
     coursework: ["Advanced Statistical Modeling", "Data Visualization", "Machine Learning"],
   },
   {
     degree: "B.Sc. (Hons) in Statistics",
     institution: "Khulna University",
+    logo: kuLogo,
     coursework: ["Regression Analysis", "Hypothesis Testing", "Probability Theory"],
   },
 ];
@@ -55,8 +59,13 @@ const Education = () => {
               {education.map((edu, index) => (
                 <div
                   key={edu.degree}
-                  className="relative pl-8 before:absolute before:left-0 before:top-3 before:w-3 before:h-3 before:bg-primary before:rounded-full before:shadow-glow after:absolute after:left-1.5 after:top-6 after:w-px after:h-[calc(100%-12px)] after:bg-border last:after:hidden"
+                  className="relative pl-20 before:absolute before:left-16 before:top-8 before:w-3 before:h-3 before:bg-primary before:rounded-full before:shadow-glow after:absolute after:left-[4.375rem] after:top-11 after:w-px after:h-[calc(100%-20px)] after:bg-border last:after:hidden"
                 >
+                  <img 
+                    src={edu.logo} 
+                    alt={`${edu.institution} logo`}
+                    className="absolute left-0 top-0 w-14 h-14 object-contain rounded-lg bg-white/10 p-1"
+                  />
                   <h4 className="font-semibold text-lg mb-1">{edu.degree}</h4>
                   <p className="text-primary text-sm mb-3">{edu.institution}</p>
                   <div className="flex flex-wrap gap-2">

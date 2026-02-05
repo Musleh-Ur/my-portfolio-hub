@@ -17,14 +17,42 @@ const Hero = () => {
       <div className="section-container relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           {/* Profile Photo */}
-          <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-primary rounded-full blur-md opacity-50 group-hover:opacity-75 transition-opacity duration-500" />
-            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-primary/30">
-              <img
-                src={profilePhoto}
-                alt="Musleh-Ur Rahman"
-                className="w-full h-full object-cover"
-              />
+          <div className="flex flex-col items-center">
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-primary rounded-full blur-md opacity-50 group-hover:opacity-75 transition-opacity duration-500" />
+              <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-primary/30">
+                <img
+                  src={profilePhoto}
+                  alt="Musleh-Ur Rahman"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            
+            {/* Social Links - Below Picture */}
+            <div className="flex gap-5 mt-8 animate-fade-up opacity-0" style={{ animationDelay: "0.6s" }}>
+              <a
+                href="https://github.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-4 rounded-xl bg-secondary hover:bg-secondary/80 text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
+              >
+                <Github className="w-7 h-7" />
+              </a>
+              <a
+                href="https://linkedin.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-4 rounded-xl bg-secondary hover:bg-secondary/80 text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
+              >
+                <Linkedin className="w-7 h-7" />
+              </a>
+              <a
+                href="mailto:rahmanmuslehur0@gmail.com"
+                className="p-4 rounded-xl bg-secondary hover:bg-secondary/80 text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
+              >
+                <Mail className="w-7 h-7" />
+              </a>
             </div>
           </div>
 
@@ -60,31 +88,6 @@ const Hero = () => {
               </Button>
             </div>
 
-            {/* Social Links */}
-            <div className="flex gap-4 justify-center lg:justify-start animate-fade-up opacity-0" style={{ animationDelay: "0.6s" }}>
-              <a
-                href="https://github.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 rounded-lg bg-secondary hover:bg-secondary/80 text-muted-foreground hover:text-primary transition-all duration-300"
-              >
-                <Github className="w-5 h-5" />
-              </a>
-              <a
-                href="https://linkedin.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 rounded-lg bg-secondary hover:bg-secondary/80 text-muted-foreground hover:text-primary transition-all duration-300"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a
-                href="mailto:rahmanmuslehur0@gmail.com"
-                className="p-3 rounded-lg bg-secondary hover:bg-secondary/80 text-muted-foreground hover:text-primary transition-all duration-300"
-              >
-                <Mail className="w-5 h-5" />
-              </a>
-            </div>
           </div>
         </div>
       </div>
