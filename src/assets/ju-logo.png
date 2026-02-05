@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="https://juniv.edu/images/favicon.ico">
+
+    <title>Jahangirnagar University</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://juniv.edu/css/priority-custom.css">
+    <link rel="stylesheet" href="https://juniv.edu/css/client-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168459382-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-168459382-1');
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.10/jquery.lazy.min.js"></script>
+
+    <style>
+        .last {
+  margin: 0 0 4px 0 !important;
+  color: #fff !important;
+background: #FF0000;
+}
+#researchAndPublication p {
+    margin: 0 0 4px 0 !important;
+}
+
+
+#profile {
+    border-top: 2px solid #035abc;
+    border-bottom: 2px solid #035abc;
+    border-left: 1px solid #f4f4f4;
+    border-right: 1px solid #f4f4f4;
+    border-radius: 4px;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+h4.ofc-headline {
+    border-top: 2px solid #035abc;
+    border-bottom: 2px solid #035abc;
+    border-left: 1px solid #f4f4f4;
+    border-right: 1px solid #f4f4f4;
+    border-radius: 4px;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+.fa.fa-asterisk.no-padding.no-margin.animated.infinite.flash.submenu {
+    color: red;
+}
+
+ .master {
+   
+    font-size: 18px;
+    }
+
+.officer-page .card-title a{color:#333;}
+
+.officer-page .card .card-body a:hover{color:#444; text-decoration:none;}
+
+.apa ul li {text-align: left;padding:5px 0; display: inherit !important;}
+.apa ul li a {
+  font-family: "Open Sans", kalpurush;
+  font-weight: normal;
+  font-size: 16px;
+  padding-left: 5px;
+}
+
+.apa ul li a:hover { color:#343a40; }
+.apa ul li:hover { color:#343a40; }
+.apa .card {  height: 250px;}
+.apa img{	float: left;}
+.officer-page .apa  .card .card-body{padding: 0px;}
+.apa .no-style {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+}
+.officer-page .apa .card{overflow: hidden;}
+
+.btn-outline-primary a:hover {
+  color: #fff;
+ text-decoration: none;
+}
+
+@media only screen and (max-width:400px) {
+ .apa .card {  height: 350px;}
+}
+
+.card-body embed{min-height:800px;}
+
+@media only screen and (max-width:400px) {
+ .isInObjectOrEmbed { width:70% !important;}
+}
+
+
+
+.jucsu ul li {text-align: left;padding:8px 0; display: inherit !important;}
+.jucsu ul li a {
+  font-family: "Open Sans", kalpurush;
+  font-weight: normal;
+  font-size: 16px;
+  padding-left: 5px;
+}
+
+.jucsu ul li a:hover { color:#343a40; }
+.jucsu ul li:hover { color:#343a40; }
+
+.jucsu img{	float: left;}
+.officer-page .jucsu .card .card-body{padding: 0px;}
+.jucsu .no-style {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+}
+    </style>
+    
+</head>
+
+<body>
+
+    <header>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <a href="https://juniv.edu">
+                        <img src="https://juniv.edu/images/logo-ju.png" alt="Jahangirnagar University" class="juniv-logo">
+                    </a>
+                </div>
+                <div class="col-lg-8 text-right">
+                    <div class="top-contact-info">
+                        <a href="tel:02224491045-51" class="d-inline-block"><i class="fa fa-phone"
+                                aria-hidden="true"></i> 02224491045-51</a>
+
+                        <a href="tel:02224491052" class="d-inline-block"><i class="fa fa-fax"
+                                aria-hidden="true"></i> Fax: 02224491052</a>
+                        <a href="mailto:registrar@juniv.edu" target="_top" class="d-inline-block"><i
+                                class="fas fa-envelope"></i> registrar@juniv.edu</a>
+                    </div>
+                    <div class="top-contact-info-2">
+                        <a href="https://juniv.edu/login" class="d-inline-block">Login</a> |
+<a href="https://juniv.edu/discussion?event_id=5" class="d-inline-block">Career</a> |
+<a href="https://juniv.edu/office/iqac" class="d-inline-block">IQAC</a> |
+<a href="https://juniv.edu/office/ictcell" class="d-inline-block">ICT Cell</a> | 
+<a href="https://juniv.edu/useful-links/apa" class="d-inline-block">APA</a>
+<a href="https://ju-admission.org" class="d-inline-block btn btn-success last">Admission</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" id="header-nav">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-blue main-nav">
+                <div class="container menu-fix">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav mr-auto">
+                                                        <li class="nav-item break-fix ">
+                                <a class="nav-link "
+                                    href="https://juniv.edu" >
+                                                                        Home
+                                </a>
+
+                                                            </li>
+                                                        <li class="nav-item break-fix  dropdown ">
+                                <a class="nav-link  dropdown-toggle "
+                                    href="#"  id="navbarDropdown"
+                                    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                    >
+                                                                        Administration
+                                </a>
+
+                                                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                                        <a class="dropdown-item" href="https://juniv.edu/administration?roleType=CHANCELLOR&amp;roleName=Chancellor">
+                                                                                Chancellor
+                                    </a>
+                                                                        <a class="dropdown-item" href="http://www.juniv.edu/administration?roleType=VICE_CHANCELLOR&amp;roleName=Vice%20Chancellor">
+                                                                                Vice Chancellor
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/administration?roleType=PRO_VICE_CHANCELLOR&amp;roleName=Pro%20Vice%20Chancellor">
+                                                                                Pro Vice Chancellor
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/administration?roleType=TREASURER&amp;roleName=Treasurer">
+                                                                                Treasurer
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/administration?roleType=REGISTER&amp;roleName=Registrar (Acting)">
+                                                                                Registrar
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/administration-page/senate">
+                                                                                Senate
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/administration-page/syndicate">
+                                                                                Syndicate
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/administration-page/academic-council">
+                                                                                Academic Council
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/administration-page/finance-committee">
+                                                                                Finance Committee
+                                    </a>
+                                                                    </div>
+                                                            </li>
+                                                        <li class="nav-item break-fix ">
+                                <a class="nav-link "
+                                    href="https://juniv.edu/academic-calendar" >
+                                                                        Calendar
+                                </a>
+
+                                                            </li>
+                                                        <li class="nav-item break-fix  dropdown ">
+                                <a class="nav-link  dropdown-toggle "
+                                    href="#"  id="navbarDropdown"
+                                    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                    >
+                                                                        Faculties
+                                </a>
+
+                                                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                                        <a class="dropdown-item" href="https://juniv.edu/faculty/arts">
+                                                                                Faculty of Arts &amp; Humanities
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/faculty/science">
+                                                                                Faculty of Mathematical &amp; Physical Sciences
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/faculty/socialsci">
+                                                                                Faculty of Social Sciences
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/faculty/biosci">
+                                                                                Faculty of Biological Sciences
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/faculty/business">
+                                                                                Faculty of Business Studies
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/faculty/law">
+                                                                                Faculty of Law
+                                    </a>
+                                                                    </div>
+                                                            </li>
+                                                        <li class="nav-item break-fix  dropdown ">
+                                <a class="nav-link  dropdown-toggle "
+                                    href="#"  id="navbarDropdown"
+                                    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                    >
+                                                                        Institutes
+                                </a>
+
+                                                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                                        <a class="dropdown-item" href="https://iba-ju.edu.bd">
+                                                                                Institute of Business Administration
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/institute/iit">
+                                                                                Institute of Information Technology
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/institute/irs">
+                                                                                Institute of Remote Sensing and GIS
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/institute/iclc">
+                                                                                Institute of Comparative Literature and Culture
+                                    </a>
+                                                                    </div>
+                                                            </li>
+                                                        <li class="nav-item break-fix  dropdown ">
+                                <a class="nav-link  dropdown-toggle "
+                                    href="#"  id="navbarDropdown"
+                                    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                    >
+                                                                        Center
+                                </a>
+
+                                                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                                        <a class="dropdown-item" href="https://juniv.edu/center/medical-centre">
+                                                                                Medical Centre
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/center/wmsrc">
+                                                                                Wazed Miah Science Research Center
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/center/students-counselling-and-guidance-centre">
+                                                                                Students Counselling and Guidance Centre
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/center/the-language-centre">
+                                                                                The Language Centre
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/center/teacher-student-centre">
+                                                                                Teacher-Student centre
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://www.juniv.edu/center/snec">
+                                                                                Special Needs Education Centre (SNEC)
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/center/chrd">
+                                                                                Center for Human Resource Development (CHRD)
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/center/ric">
+                                                                                Research Innovation Centre
+                                    </a>
+                                                                    </div>
+                                                            </li>
+                                                        <li class="nav-item break-fix  dropdown ">
+                                <a class="nav-link  dropdown-toggle "
+                                    href="#"  id="navbarDropdown"
+                                    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                    >
+                                                                        Offices
+                                </a>
+
+                                                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                                        <a class="dropdown-item" href="https://juniv.edu/center/vc-office">
+                                                                                Vice Chancellor Office
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/office/provc-administration">
+                                                                                Pro Vice Chancellor (Administration) Office
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/office/provc-academic">
+                                                                                Pro Vice Chancellor (Academic) Office
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/office/treasurer-office">
+                                                                                Treasurer Office
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/office/registrar-office">
+                                                                                Registrar Office
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/office/proctor-office">
+                                                                                Proctor Office
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/office/comptroller-office">
+                                                                                Comptroller Office
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/office/engineering-office">
+                                                                                Engineering Office
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/office/iqac">
+                                                                                IQAC
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/office/ictcell">
+                                                                                ICT Cell
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/office/planning-and-development-office">
+                                                                                Planning and Development Office
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/office/public-relation-office">
+                                                                                Public Relation Office
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/office/physical-education-office">
+                                                                                Physical Education Office
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/office/office-of-the-controller-of-examinations">
+                                                                                Office of the Controller of Examinations
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/office/internal-audit-office">
+                                                                                Internal Audit Office
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/office/university-library">
+                                                                                University Library
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/office/science-workshop">
+                                                                                Science Workshop
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/office/transport-office">
+                                                                                Transport Office
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/office/bncc">
+                                                                                BNCC
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/office/rover-scout">
+                                                                                Rover Scout
+                                    </a>
+                                                                    </div>
+                                                            </li>
+                                                        <li class="nav-item break-fix  dropdown ">
+                                <a class="nav-link  dropdown-toggle "
+                                    href="#"  id="navbarDropdown"
+                                    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                    >
+                                                                        Accommodations
+                                </a>
+
+                                                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                                        <a class="dropdown-item" href="https://juniv.edu/hall/al-beruni-hall">
+                                                                                Al Beruni Hall
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/hall/a-f-m-kamaluddin-hall">
+                                                                                A F M Kamaluddin Hall
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/hall/jahanara-imam-hall">
+                                                                                Jahanara Imam Hall
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/hall/nawab-faizunnesa-hall">
+                                                                                Nawab Faizunnesa Hall
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/hall/pritilata-hall">
+                                                                                Pritilata Hall
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/hall/a-k-fazlul-haque-hall">
+                                                                                Sher-e-Bangla A. K. Fazlul Haq Hall
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/hall/begum-khaleda-zia-hall">
+                                                                                Begum Khaleda Zia Hall
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/hall/maulana-bhashani-hall">
+                                                                                Maulana Bhashani Hall
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/hall/meer-mosharraf-hossain-hall">
+                                                                                Mir Mosharraf Hossain Hall
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/hall/shaheed-salam-barkat-hall">
+                                                                                Shaheed Salam-Barkat Hall
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/hall/shaheed-rafiq-jabbar-hall">
+                                                                                Shaheed Rafiq-Jabbar Hall
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/hall/july-24-jagoroni-hall">
+                                                                                July 24 Jagoroni Hall
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/hall/shaheed-felani-khatun-hall">
+                                                                                Shaheed Felani Khatun Hall
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/hall/bishwakabi-rabindranath-tagore-hall">
+                                                                                Bishwakabi Rabindranath Tagore Hall
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/hall/begum-sufia-kamal-hall">
+                                                                                Begum Sufia Kamal Hall
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/hall/rokeya-hall">
+                                                                                Rokeya Hall
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/hall/fazilatunnesa-hall">
+                                                                                Fazilatunnesa Hall
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/hall/bir-protik-taramon-bibi-hall">
+                                                                                Bir Protik Taramon Bibi Hall
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/hall/shaheed-tajuddin-ahmad-hall">
+                                                                                Shaheed Tajuddin Ahmad Hall
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/hall/nawab-salimullah-hall">
+                                                                                Nawab Salimullah Hall
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/hall/jatiya-kabi-kazi-nazrul-islam-hall">
+                                                                                Jatiya Kabi Kazi Nazrul Islam Hall
+                                    </a>
+                                                                    </div>
+                                                            </li>
+                                                        <li class="nav-item break-fix ">
+                                <a class="nav-link "
+                                    href="https://juniv.edu/teachers" >
+                                                                        People
+                                </a>
+
+                                                            </li>
+                                                        <li class="nav-item break-fix  dropdown ">
+                                <a class="nav-link  dropdown-toggle "
+                                    href="#"  id="navbarDropdown"
+                                    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                    >
+                                     <i
+                                        class="fa fa-asterisk no-padding no-margin animated infinite flash menu"></i>
+                                                                        Admission
+                                </a>
+
+                                                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                                        <a class="dropdown-item" href="https://academic.juniv.edu">
+                                                                                Academic Section
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://bachelor.ju-admission.com">
+                                                                                Bachelor (Honours) Admission
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/admission/graduate">
+                                                                                Masters Admission
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://postgrad.ju-admission.com">
+                                                                                M.Phil &amp; PhD Admission
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/admission/weekend-courses">
+                                                                                Weekend &amp; Evening Courses
+                                    </a>
+                                                                    </div>
+                                                            </li>
+                                                        <li class="nav-item break-fix ">
+                                <a class="nav-link "
+                                    href="https://juniv.edu/page/jucsu" >
+                                                                        JUCSU
+                                </a>
+
+                                                            </li>
+                                                        <li class="nav-item break-fix  dropdown ">
+                                <a class="nav-link  dropdown-toggle "
+                                    href="#"  id="navbarDropdown"
+                                    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                    >
+                                                                        Library
+                                </a>
+
+                                                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                                        <a class="dropdown-item" href="https://library.juniv.edu">
+                                                                                Library Website
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://www.library.juniv.edu/login-2/?redirect_to=https://www.library.juniv.edu/access-remotely/">
+                                                                                Remote Access
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://journals.juniv.edu">
+                                                                                Journals
+                                    </a>
+                                                                    </div>
+                                                            </li>
+                                                        <li class="nav-item break-fix ">
+                                <a class="nav-link "
+                                    href="https://juniv.edu/page/ju-journal" >
+                                                                        Journals
+                                </a>
+
+                                                            </li>
+                                                        <li class="nav-item break-fix  dropdown ">
+                                <a class="nav-link  dropdown-toggle "
+                                    href="#"  id="navbarDropdown"
+                                    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                    >
+                                                                        Misc
+                                </a>
+
+                                                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                                        <a class="dropdown-item" href="https://juniv.edu/custom/slug/research">
+                                                                                Research
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/certificate">
+                                                                                NOC &amp; GO
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/page/university-diary">
+                                                                                University Diary
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/page/annual-report">
+                                                                                Annual Report
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/discussion?event_id=8">
+                                                                                Students Stipend
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://ju-regigraduate.org">
+                                                                                Registered Graduate Cell
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://devpis.juniv.edu">
+                                                                                Apply for Central ID card
+                                    </a>
+                                                                        <a class="dropdown-item" href="https://juniv.edu/student-email/apply">
+                                                                                Apply for Student Email ID
+                                    </a>
+                                                                    </div>
+                                                            </li>
+                                                    </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main role="main">
+
+    <div class="container" >
+        <div class="content-section">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Not Found</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong>URL Not Found</strong> <a href="https://juniv.edu">Click Here</a> to back home
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+<!-- FOOTER -->
+
+<div class="container-fluid">
+    <div class="row separator"></div>
+    <div class="row footer">
+        <div class="container">
+
+            <div class="row footer-links">
+
+                <div class="col-md-3">
+                    <h6>USEFUL LINKS</h6>
+                    <ul class="no-style">
+                                                <li><a href="/certificate" target="_blank"><i
+                                    class="fa fa-angle-double-right"></i> NOC &amp; GO</a></li>
+                                                <li><a href="/download?center_id=4175" target="_blank"><i
+                                    class="fa fa-angle-double-right"></i> Download Form</a></li>
+                                                <li><a href="/discussion?event_id=7" target="_self"><i
+                                    class="fa fa-angle-double-right"></i> Result</a></li>
+                                                <li><a href="https://juniv.edu/page/contact-us" target="_self"><i
+                                    class="fa fa-angle-double-right"></i> Contact Us</a></li>
+                                            </ul>
+
+                </div>
+
+                <div class="col-md-3">
+                    <h6>ADMISSION LINKS</h6>
+                    <ul class="no-style">
+                                                <li><a href="http://juniv-admission.org" target="_blank"><i
+                                    class="fa fa-angle-double-right"></i> Bachelor (Honours) Admission</a></li>
+                                                <li><a href="https://juniv.edu/admission/graduate" target="_blank"><i
+                                    class="fa fa-angle-double-right"></i> Masters Admission</a></li>
+                                                <li><a href="/admission/m.phil-phd" target="_self"><i
+                                    class="fa fa-angle-double-right"></i> M.Phil &amp; PhD Admission</a></li>
+                                                <li><a href="/admission/weekend-courses" target="_self"><i
+                                    class="fa fa-angle-double-right"></i> Weekend &amp; Evening Courses</a></li>
+                                            </ul>
+                </div>
+
+                <div class="col-md-3">
+                    <h6>OTHERS</h6>
+                    <ul class="no-style">
+                                                <li><a href="https://mail.google.com/a/juniv.edu/" target="_self"><i
+                                    class="fa fa-angle-double-right"></i> Web Mail</a></li>
+                                                <li><a href="https://juniv.edu/student-email/apply" target="_self"><i
+                                    class="fa fa-angle-double-right"></i> Apply for Student Email ID</a></li>
+                                                <li><a href="https://forms.gle/McJXXwJAGQs2RxLS7" target="_self"><i
+                                    class="fa fa-angle-double-right"></i> D-Nothi Data Collection Form</a></li>
+                                                <li><a href="https://juniv.edu/page/sexual-harassment-complaints-committee" target="_self"><i
+                                    class="fa fa-angle-double-right"></i> Sexual Harassment Complaints Committee</a></li>
+                                            </ul>
+                </div>
+
+                <div class="col-md-3">
+
+                    <row>
+
+                        <div class="col-md-12">
+                            <img class="lazy" data-src="https://juniv.edu/images/logo-ju-small.png"
+                                style="width: 100px;background: white;border-radius: 5%;" />
+                        </div>
+
+                    </row>
+
+                    <row>
+                        <div class="col-md-12 social-icons">
+                            <a href="https://www.facebook.com/edu.juniv"> <i class="fab fa-facebook-f" data-pack="social"
+                                    data-tags="like, post, share"></i> </a>
+                            <a href=""> <i class="fab fa-twitter" data-pack="social"
+                                    data-tags="like, post, share"></i> </a>
+                            <a href=""> <i class="fab fa-linkedin-in" data-pack="social"
+                                    data-tags="like, post, share"></i> </a>
+                        </div>
+                    </row>
+
+                </div>
+
+            </div>
+
+            <div class="row footer-copy-rights-text">
+                <div class="col-md-8">
+                    Jahangirnagar University, Savar, Dhaka-1342, Bangladesh. Telephone: PABX:02224491045-51 , Fax:02224491052
+                </div>
+                <div class="col-md-4 text-md-right"> © 2025 Jahangirnagar University </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</main>
+
+<script type="text/javascript">
+    $(function() {
+        $('.lazy').Lazy();
+    });
+
+    //    jQuery('#accordion .accordion-toggle').click(function () {
+    //        jQuery(this).find('i').toggleClass('fa-plus fa-minus')
+    //                .closest('.accordion-toggle').next().slideToggle()
+    //                .siblings('.accordion-toggle').slideUp();
+    //    });
+
+    $("#header-nav").find(".dropdown").hover(function() {
+        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+    }, function() {
+        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+    });
+
+    
+</script>
+
+
+</body>
+
+</html>
