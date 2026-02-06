@@ -82,7 +82,7 @@ const Navbar = () => {
               ))}
               <li>
                 <Button variant="hero" size="sm" className="w-full" asChild>
-                  <a href="mailto:rahmanmuslehur0@gmail.com">Hire Me</a>
+                  <a href="https://www.fiverr.com/muslehurrahman?public_mode=true" target="_blank" rel="noopener noreferrer">Hire Me</a>
                 </Button>
               </li>
             </ul>
