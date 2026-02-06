@@ -64,7 +64,7 @@ const Education = () => {
                   <img 
                     src={edu.logo} 
                     alt={`${edu.institution} logo`}
-                    className="absolute left-0 top-0 w-14 h-14 object-contain rounded-lg bg-white/10 p-1"
+                    className="absolute left-0 top-0 w-14 h-14 object-contain rounded-lg p-1"
                   />
                   <h4 className="font-semibold text-lg mb-1">{edu.degree}</h4>
                   <p className="text-primary text-sm mb-3">{edu.institution}</p>
