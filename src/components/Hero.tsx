@@ -82,8 +82,8 @@ const Hero = () => {
                 </a>
               </Button>
               <Button variant="glow" size="lg" asChild>
-                <a href="#contact">
-                  Get In Touch
+                <a href="#education">
+                  About Me
                 </a>
               </Button>
             </div>
