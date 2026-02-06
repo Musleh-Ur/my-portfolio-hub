@@ -82,7 +82,7 @@ const Navbar = () => {
               ))}
               <li>
                 <Button variant="hero" size="sm" className="w-full" asChild>
-                  <a href="#contact">Hire Me</a>
+                  <a href="#marketplace">Hire Me</a>
                 </Button>
               </li>
             </ul>
