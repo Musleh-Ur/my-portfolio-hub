@@ -34,7 +34,7 @@ const certifications = [
 
 const Education = () => {
   return (
-    <section id="education" className="py-24 relative">
+    <section id="education" className="py-16 relative">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(var(--primary)/0.03)_0%,transparent_50%)]" />
       
       <div className="section-container relative z-10">

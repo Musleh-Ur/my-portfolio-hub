@@ -32,7 +32,7 @@ const Hero = () => {
             {/* Social Links - Below Picture */}
             <div className="flex gap-5 mt-8 animate-fade-up opacity-0" style={{ animationDelay: "0.6s" }}>
               <a
-                href="https://github.com/"
+                href="https://github.com/Musleh-Ur"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-4 rounded-xl bg-secondary hover:bg-secondary/80 text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
@@ -40,7 +40,7 @@ const Hero = () => {
                 <Github className="w-7 h-7" />
               </a>
               <a
-                href="https://linkedin.com/"
+                href="https://www.linkedin.com/in/musleh-urrahman"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-4 rounded-xl bg-secondary hover:bg-secondary/80 text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
@@ -82,8 +82,8 @@ const Hero = () => {
                 </a>
               </Button>
               <Button variant="glow" size="lg" asChild>
-                <a href="#contact">
-                  Get In Touch
+                <a href="#education">
+                  About Me
                 </a>
               </Button>
             </div>

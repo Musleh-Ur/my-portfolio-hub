@@ -184,7 +184,7 @@ const Projects = () => {
   }, [activeSkill]);
 
   return (
-    <section id="projects" className="py-24 relative">
+    <section id="projects" className="py-16 relative">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,hsl(var(--accent)/0.05)_0%,transparent_50%)]" />
       
       <div className="section-container relative z-10">

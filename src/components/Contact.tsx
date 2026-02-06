@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 relative">
+    <section id="contact" className="py-16 relative">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,hsl(var(--primary)/0.08)_0%,transparent_60%)]" />
       
       <div className="section-container relative z-10">
@@ -73,15 +73,21 @@ const Contact = () => {
           {/* Social Links */}
           <div className="flex justify-center gap-4">
             <Button variant="glow" size="lg" asChild>
-              <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/Musleh-Ur" target="_blank" rel="noopener noreferrer">
                 <Github className="w-5 h-5" />
                 GitHub
               </a>
             </Button>
             <Button variant="glow" size="lg" asChild>
-              <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/musleh-urrahman" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="w-5 h-5" />
                 LinkedIn
+              </a>
+            </Button>
+            <Button variant="glow" size="lg" asChild>
+              <a href="https://wa.me/8801760928867" target="_blank" rel="noopener noreferrer">
+                <Phone className="w-5 h-5" />
+                WhatsApp
               </a>
             </Button>
           </div>
