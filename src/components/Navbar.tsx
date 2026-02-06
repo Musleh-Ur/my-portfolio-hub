@@ -52,7 +52,7 @@ const Navbar = () => {
           {/* CTA */}
           <div className="hidden md:block">
             <Button variant="hero" size="sm" asChild>
-              <a href="https://www.fiverr.com/muslehurrahman?public_mode=true" target="_blank" rel="noopener noreferrer">Hire Me</a>
+              <a href="#contact">Hire Me</a>
             </Button>
           </div>
 
