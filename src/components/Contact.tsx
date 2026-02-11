@@ -1,4 +1,5 @@
 import { Mail, MapPin, Phone, Send, Github, Linkedin } from "lucide-react";
+import fiverrLogo from "@/assets/fiverr-logo.png";
 import { Button } from "@/components/ui/button";
 
 const Contact = () => {
@@ -72,9 +73,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 className="group flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-card border border-border/50 hover:border-[#1dbf73]/40 transition-all duration-300 hover:shadow-[0_0_20px_rgba(29,191,115,0.15)]"
               >
-                <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
-                  <path d="M21.645 8.379h-3.27c0-2.088-1.695-3.783-3.783-3.783a3.79 3.79 0 0 0-3.783 3.783H7.526v2.721h1.392v8.9h2.721v-8.9h2.721v8.9h2.721v-8.9h1.843V8.379h-1.06v-.001zm-7.053 0a1.06 1.06 0 0 1 2.121 0h-2.121zM4.355 11.1h-.739v8.9H6.337v-8.9h-.739a1.243 1.243 0 0 1-1.243 0zM4.976 7.317a1.582 1.582 0 1 0 0 3.165 1.582 1.582 0 0 0 0-3.165z" fill="#1DBF73"/>
-                </svg>
+                <img src={fiverrLogo} alt="Fiverr" className="h-6 w-auto" />
                 <span className="font-medium text-muted-foreground group-hover:text-foreground transition-colors">Fiverr</span>
               </a>
               <a
