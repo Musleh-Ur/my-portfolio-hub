@@ -73,7 +73,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 className="group flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-card border border-border/50 hover:border-[#1dbf73]/40 transition-all duration-300 hover:shadow-[0_0_20px_rgba(29,191,115,0.15)]"
               >
-                <img src={fiverrLogo} alt="Fiverr" className="h-6 w-auto" />
+                <img src={fiverrLogo} alt="Fiverr" className="h-6 w-6 rounded-full object-cover" />
                 <span className="font-medium text-muted-foreground group-hover:text-foreground transition-colors">Fiverr</span>
               </a>
               <a
