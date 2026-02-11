@@ -1,4 +1,5 @@
 import { Code, Database, BarChart3, Brain, FileSpreadsheet, Server, TrendingUp } from "lucide-react";
+import { AnimatedSection } from "@/hooks/useScrollAnimation";
 
 const skills = [
   {
@@ -55,7 +56,7 @@ const Skills = () => {
       
       <div className="section-container relative z-10">
         {/* Header */}
-        <div className="text-center mb-16">
+        <AnimatedSection animation="fade-up" className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
             <Code className="w-4 h-4 text-primary" />
             <span className="text-primary font-mono text-sm">Technical Expertise</span>
@@ -67,47 +68,49 @@ const Skills = () => {
             A comprehensive toolkit for end-to-end data science workflows, 
             from data wrangling to model deployment.
           </p>
-        </div>
+        </AnimatedSection>
 
         {/* Skills Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skills.map((skill, index) => (
-            <div
-              key={skill.category}
-              className={`group relative p-6 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50 ${skill.borderColor} transition-all duration-500 hover:shadow-lg hover:-translate-y-1`}
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              {/* Gradient background on hover */}
-              <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${skill.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-              
-              <div className="relative z-10">
-                {/* Category header */}
-                <div className="flex items-center gap-3 mb-5">
-                  <div className="p-2.5 rounded-xl bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors duration-300 ring-1 ring-primary/20">
-                    <skill.icon className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-base text-foreground">{skill.category}</h3>
-                    <p className="text-xs text-muted-foreground">{skill.items.length} technologies</p>
-                  </div>
-                </div>
+            <AnimatedSection key={skill.category} animation="fade-up" delay={index * 100}>
+              <div
+                className={`group relative p-6 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50 ${skill.borderColor} transition-all duration-500 hover:shadow-lg hover:-translate-y-2 active:scale-[0.98] cursor-default`}
+              >
+                {/* Gradient background on hover */}
+                <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${skill.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
                 
-                {/* Skills list */}
-                <div className="flex flex-wrap gap-2">
-                  {skill.items.map((item, itemIndex) => (
-                    <span
-                      key={item}
-                      className="px-3 py-1.5 text-sm font-medium rounded-lg bg-secondary/80 text-muted-foreground hover:text-foreground hover:bg-primary/15 transition-all duration-300 border border-transparent hover:border-primary/20"
-                    >
-                      {item}
-                    </span>
-                  ))}
+                {/* Shimmer on hover */}
+                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-shimmer" />
+
+                <div className="relative z-10">
+                  {/* Category header */}
+                  <div className="flex items-center gap-3 mb-5">
+                    <div className="p-2.5 rounded-xl bg-primary/10 text-primary group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300 ring-1 ring-primary/20">
+                      <skill.icon className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-base text-foreground">{skill.category}</h3>
+                      <p className="text-xs text-muted-foreground">{skill.items.length} technologies</p>
+                    </div>
+                  </div>
+                  
+                  {/* Skills list */}
+                  <div className="flex flex-wrap gap-2">
+                    {skill.items.map((item) => (
+                      <span
+                        key={item}
+                        className="px-3 py-1.5 text-sm font-medium rounded-lg bg-secondary/80 text-muted-foreground hover:text-foreground hover:bg-primary/15 hover:scale-105 active:scale-95 transition-all duration-300 border border-transparent hover:border-primary/20 cursor-default"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
+            </AnimatedSection>
           ))}
         </div>
-
       </div>
     </section>
   );
