@@ -1,4 +1,4 @@
-import { GraduationCap, Award, Calendar } from "lucide-react";
+import { GraduationCap, Award, Calendar, ExternalLink } from "lucide-react";
 import juLogo from "@/assets/ju-logo.png";
 import kuLogo from "@/assets/ku-logo.png";
 
@@ -21,14 +21,17 @@ const certifications = [
   {
     name: "Python for Data Science, AI & Development",
     issuer: "Coursera",
+    certLink: "https://www.coursera.org/account/accomplishments/verify/NRMVP944643Q",
   },
   {
     name: "Data Analytics and Power BI Career Path",
     issuer: "Interactive Cares",
+    certLink: "https://interactivecares.com/certificate/4b3b5cb6-c44f-4902-aaca-df672488aec5",
   },
   {
     name: "SQL (Basic) Certification",
     issuer: "HackerRank",
+    certLink: "https://www.hackerrank.com/certificates/iframe/246059605df4",
   },
 ];
 
@@ -105,6 +108,14 @@ const Education = () => {
                     <span className="w-1.5 h-1.5 rounded-full bg-primary" />
                     {cert.issuer}
                   </p>
+                  <a
+                    href={cert.certLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex items-center gap-1.5 text-xs font-medium text-primary hover:text-primary/80 transition-colors"
+                  >
+                    View Certificate <ExternalLink className="w-3 h-3" />
+                  </a>
                 </div>
               ))}
             </div>
