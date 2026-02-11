@@ -112,7 +112,7 @@ const Education = () => {
                     href={cert.certLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-3 inline-flex items-center gap-1.5 text-xs font-medium text-primary hover:text-primary/80 transition-colors"
+                    className="mt-3 inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-primary border border-primary/40 rounded-lg hover:bg-primary/10 hover:border-primary hover:scale-105 active:scale-95 transition-all duration-200"
                   >
                     View Certificate <ExternalLink className="w-3 h-3" />
                   </a>
