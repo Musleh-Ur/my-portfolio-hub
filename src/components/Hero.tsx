@@ -67,7 +67,7 @@ const Hero = () => {
             <h2 className="text-xl md:text-2xl text-muted-foreground font-medium mb-6 animate-fade-up opacity-0" style={{ animationDelay: "0.3s" }}>
               Data Scientist & Analytics Professional
             </h2>
-            <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-8 animate-fade-up opacity-0" style={{ animationDelay: "0.4s" }}>
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-8 text-justify animate-fade-up opacity-0" style={{ animationDelay: "0.4s" }}>
               Transforming complex data into actionable insights through machine learning, 
               statistical modeling, and interactive visualizations. Passionate about driving 
               data-driven decision making.
