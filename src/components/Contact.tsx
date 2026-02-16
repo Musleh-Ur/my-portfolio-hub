@@ -63,8 +63,32 @@ const Contact = () => {
             </AnimatedSection>
           </div>
 
+          {/* Social Links */}
+          <AnimatedSection animation="fade-up" delay={200}>
+            <div className="flex justify-center gap-4 mb-12">
+              <Button variant="glow" size="lg" asChild className="hover:scale-105 active:scale-95 transition-transform duration-200">
+                <a href="https://github.com/Musleh-Ur" target="_blank" rel="noopener noreferrer">
+                  <Github className="w-5 h-5" />
+                  GitHub
+                </a>
+              </Button>
+              <Button variant="glow" size="lg" asChild className="hover:scale-105 active:scale-95 transition-transform duration-200">
+                <a href="https://www.linkedin.com/in/musleh-urrahman" target="_blank" rel="noopener noreferrer">
+                  <Linkedin className="w-5 h-5" />
+                  LinkedIn
+                </a>
+              </Button>
+              <Button variant="glow" size="lg" asChild className="hover:scale-105 active:scale-95 transition-transform duration-200">
+                <a href="https://wa.me/8801760928867" target="_blank" rel="noopener noreferrer">
+                  <Phone className="w-5 h-5" />
+                  WhatsApp
+                </a>
+              </Button>
+            </div>
+          </AnimatedSection>
+
           {/* Marketplace */}
-          <AnimatedSection animation="scale-in" delay={200}>
+          <AnimatedSection animation="scale-in" delay={300}>
             <div id="marketplace" className="mb-12">
               <div className="text-center mb-6">
                 <h3 className="text-xl font-bold mb-2">
@@ -94,30 +118,6 @@ const Contact = () => {
                   <span className="font-medium text-muted-foreground group-hover:text-foreground transition-colors">Upwork</span>
                 </a>
               </div>
-            </div>
-          </AnimatedSection>
-
-          {/* Social Links */}
-          <AnimatedSection animation="fade-up" delay={300}>
-            <div className="flex justify-center gap-4 mb-12">
-              <Button variant="glow" size="lg" asChild className="hover:scale-105 active:scale-95 transition-transform duration-200">
-                <a href="https://github.com/Musleh-Ur" target="_blank" rel="noopener noreferrer">
-                  <Github className="w-5 h-5" />
-                  GitHub
-                </a>
-              </Button>
-              <Button variant="glow" size="lg" asChild className="hover:scale-105 active:scale-95 transition-transform duration-200">
-                <a href="https://www.linkedin.com/in/musleh-urrahman" target="_blank" rel="noopener noreferrer">
-                  <Linkedin className="w-5 h-5" />
-                  LinkedIn
-                </a>
-              </Button>
-              <Button variant="glow" size="lg" asChild className="hover:scale-105 active:scale-95 transition-transform duration-200">
-                <a href="https://wa.me/8801760928867" target="_blank" rel="noopener noreferrer">
-                  <Phone className="w-5 h-5" />
-                  WhatsApp
-                </a>
-              </Button>
             </div>
           </AnimatedSection>
 
