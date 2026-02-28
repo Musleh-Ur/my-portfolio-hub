@@ -68,7 +68,7 @@ const Education = () => {
                     <img 
                       src={edu.logo} 
                       alt={`${edu.institution} logo`}
-                      className="absolute left-0 top-0 w-14 h-14 object-contain rounded-lg bg-transparent p-1 group-hover:scale-110 transition-transform duration-300"
+                      className="absolute left-0 top-0 w-14 h-14 object-contain rounded-lg bg-transparent p-1 group-hover:scale-110 transition-transform duration-300 mix-blend-lighten"
                     />
                     <h4 className="font-semibold text-lg mb-1 group-hover:text-primary transition-colors duration-300">{edu.degree}</h4>
                     <p className="text-primary text-sm mb-3">{edu.institution}</p>
