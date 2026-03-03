@@ -232,6 +232,13 @@ const Projects = () => {
                     <h3 className="text-lg font-bold leading-tight group-hover:text-primary transition-colors duration-300">{project.title}</h3>
                   </div>
                   
+                  {/* Project Image */}
+                  {project.image && (
+                    <div className="mb-4 -mx-6 -mt-2 overflow-hidden">
+                      <img src={project.image} alt={project.title} className="w-full h-40 object-cover object-top" />
+                    </div>
+                  )}
+
                   {/* Description */}
                   <p className="text-muted-foreground text-sm mb-4 leading-relaxed line-clamp-3">
                     {project.description}
