@@ -60,33 +60,6 @@ const projects: Project[] = [
     githubUrl: "https://github.com/",
   },
   {
-    id: 4,
-    title: "Predictive Maintenance System",
-    description: "Designed a predictive maintenance system using Python for ML model training and Power BI for visualizing equipment health predictions.",
-    skills: ["python", "ml", "powerbi"],
-    icon: Brain,
-    highlights: [
-      "Real-time equipment health monitoring",
-      "Reduced unplanned downtime predictions",
-      "Interactive Power BI dashboards for maintenance teams",
-    ],
-    metrics: { "Accuracy": "91%", "Models": "3" },
-    githubUrl: "https://github.com/",
-  },
-  {
-    id: 5,
-    title: "Business Intelligence Report",
-    description: "Built a comprehensive BI report integrating Google Sheets data with Power BI and SnowFlake for real-time business insights and analytics.",
-    skills: ["powerbi", "gsheets", "snowflake"],
-    icon: BarChart,
-    highlights: [
-      "Real-time data synchronization from multiple sources",
-      "Automated refresh schedules for live reporting",
-      "Executive-level KPI tracking and visualization",
-    ],
-    metrics: { "Reports": "12", "Users": "50+" },
-  },
-  {
     id: 6,
     title: "Financial Planning Tool",
     description: "Developed a collaborative budgeting and financial planning tool using Excel and Google Sheets with advanced formulas and automation.",
