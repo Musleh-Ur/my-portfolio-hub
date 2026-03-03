@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import hospitalityVideo from "@/assets/hospitality-dashboard-video.mp4";
+const hospitalityVideo = "/videos/hospitality-dashboard.mp4";
 import { 
   ExternalLink, Github, TrendingUp, BarChart, Database, Brain, 
   FileSpreadsheet, Snowflake, Code, Table, Star 
