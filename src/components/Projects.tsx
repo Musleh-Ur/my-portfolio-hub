@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import hospitalityDashboard from "@/assets/hospitality-dashboard.jpg";
 import { 
   ExternalLink, Github, TrendingUp, BarChart, Database, Brain, 
   FileSpreadsheet, Snowflake, Code, Table, Star 
@@ -15,6 +16,7 @@ interface Project {
   metrics: Record<string, string>;
   githubUrl?: string;
   liveUrl?: string;
+  image?: string;
 }
 
 const projects: Project[] = [
@@ -44,6 +46,8 @@ const projects: Project[] = [
       "Custom tooltips and calculated columns for strategic insights",
     ],
     metrics: { "Efficiency": "+25%", "Data Sources": "5+" },
+    image: hospitalityDashboard,
+    liveUrl: "https://app.powerbi.com/view?r=eyJrIjoiYWExNTUxMjEtMGZkZS00NTE5LWFkNzYtOGMzMDhiNDM1ZGVhIiwidCI6IjhhNjdhOTE1LTVjYTItNDRiOS1iOGIxLTczZTZlOGIwNzg1MiIsImMiOjEwfQ%3D%3D",
   },
   {
     id: 3,
@@ -58,33 +62,6 @@ const projects: Project[] = [
     ],
     metrics: { "Query Types": "15+", "Tables": "8" },
     githubUrl: "https://github.com/",
-  },
-  {
-    id: 4,
-    title: "Predictive Maintenance System",
-    description: "Designed a predictive maintenance system using Python for ML model training and Power BI for visualizing equipment health predictions.",
-    skills: ["python", "ml", "powerbi"],
-    icon: Brain,
-    highlights: [
-      "Real-time equipment health monitoring",
-      "Reduced unplanned downtime predictions",
-      "Interactive Power BI dashboards for maintenance teams",
-    ],
-    metrics: { "Accuracy": "91%", "Models": "3" },
-    githubUrl: "https://github.com/",
-  },
-  {
-    id: 5,
-    title: "Business Intelligence Report",
-    description: "Built a comprehensive BI report integrating Google Sheets data with Power BI and SnowFlake for real-time business insights and analytics.",
-    skills: ["powerbi", "gsheets", "snowflake"],
-    icon: BarChart,
-    highlights: [
-      "Real-time data synchronization from multiple sources",
-      "Automated refresh schedules for live reporting",
-      "Executive-level KPI tracking and visualization",
-    ],
-    metrics: { "Reports": "12", "Users": "50+" },
   },
   {
     id: 6,
@@ -255,6 +232,13 @@ const Projects = () => {
                     <h3 className="text-lg font-bold leading-tight group-hover:text-primary transition-colors duration-300">{project.title}</h3>
                   </div>
                   
+                  {/* Project Image */}
+                  {project.image && (
+                    <div className="mb-4 -mx-6 -mt-2 overflow-hidden">
+                      <img src={project.image} alt={project.title} className="w-full h-40 object-cover object-top" />
+                    </div>
+                  )}
+
                   {/* Description */}
                   <p className="text-muted-foreground text-sm mb-4 leading-relaxed line-clamp-3">
                     {project.description}
