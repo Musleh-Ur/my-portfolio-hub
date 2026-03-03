@@ -37,7 +37,7 @@ const projects: Project[] = [
   {
     id: 2,
     title: "Hospitality Management Dashboard",
-    description: "Interactive Power BI dashboard integrating multiple data sources for real-time hospitality analytics and strategic decision-making with advanced DAX measures.",
+    description: "Advanced DAX measures.",
     skills: ["powerbi", "sql", "excel"],
     icon: BarChart,
     highlights: [
