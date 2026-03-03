@@ -235,8 +235,8 @@ const Projects = () => {
                   
                   {/* Project Media */}
                   {project.video && (
-                    <div className="mb-4 -mx-6 -mt-2 overflow-hidden">
-                      <video src={project.video} autoPlay loop muted playsInline className="w-full h-40 object-cover object-top" />
+                    <div className="mb-4 overflow-hidden rounded-lg">
+                      <video src={project.video} autoPlay loop muted playsInline className="w-full h-32 object-cover object-top rounded-lg" />
                     </div>
                   )}
                   {project.image && !project.video && (
