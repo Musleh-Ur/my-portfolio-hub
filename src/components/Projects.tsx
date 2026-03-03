@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import hospitalityDashboard from "@/assets/hospitality-dashboard.jpg";
 import { 
   ExternalLink, Github, TrendingUp, BarChart, Database, Brain, 
   FileSpreadsheet, Snowflake, Code, Table, Star 
@@ -15,6 +16,7 @@ interface Project {
   metrics: Record<string, string>;
   githubUrl?: string;
   liveUrl?: string;
+  image?: string;
 }
 
 const projects: Project[] = [
@@ -44,6 +46,8 @@ const projects: Project[] = [
       "Custom tooltips and calculated columns for strategic insights",
     ],
     metrics: { "Efficiency": "+25%", "Data Sources": "5+" },
+    image: hospitalityDashboard,
+    liveUrl: "https://app.powerbi.com/view?r=eyJrIjoiYWExNTUxMjEtMGZkZS00NTE5LWFkNzYtOGMzMDhiNDM1ZGVhIiwidCI6IjhhNjdhOTE1LTVjYTItNDRiOS1iOGIxLTczZTZlOGIwNzg1MiIsImMiOjEwfQ%3D%3D",
   },
   {
     id: 3,
