@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import hospitalityDashboard from "@/assets/hospitality-dashboard.jpg";
+import hospitalityVideo from "@/assets/hospitality-dashboard-video.mp4";
 import { 
   ExternalLink, Github, TrendingUp, BarChart, Database, Brain, 
   FileSpreadsheet, Snowflake, Code, Table, Star 
@@ -17,6 +17,7 @@ interface Project {
   githubUrl?: string;
   liveUrl?: string;
   image?: string;
+  video?: string;
 }
 
 const projects: Project[] = [
@@ -46,7 +47,7 @@ const projects: Project[] = [
       "Custom tooltips and calculated columns for strategic insights",
     ],
     metrics: { "Efficiency": "+25%", "Data Sources": "5+" },
-    image: hospitalityDashboard,
+    video: hospitalityVideo,
     liveUrl: "https://app.powerbi.com/view?r=eyJrIjoiYWExNTUxMjEtMGZkZS00NTE5LWFkNzYtOGMzMDhiNDM1ZGVhIiwidCI6IjhhNjdhOTE1LTVjYTItNDRiOS1iOGIxLTczZTZlOGIwNzg1MiIsImMiOjEwfQ%3D%3D",
   },
   {
@@ -232,8 +233,13 @@ const Projects = () => {
                     <h3 className="text-lg font-bold leading-tight group-hover:text-primary transition-colors duration-300">{project.title}</h3>
                   </div>
                   
-                  {/* Project Image */}
-                  {project.image && (
+                  {/* Project Media */}
+                  {project.video && (
+                    <div className="mb-4 -mx-6 -mt-2 overflow-hidden">
+                      <video src={project.video} autoPlay loop muted playsInline className="w-full h-40 object-cover object-top" />
+                    </div>
+                  )}
+                  {project.image && !project.video && (
                     <div className="mb-4 -mx-6 -mt-2 overflow-hidden">
                       <img src={project.image} alt={project.title} className="w-full h-40 object-cover object-top" />
                     </div>
