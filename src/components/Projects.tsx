@@ -38,7 +38,7 @@ const projects: Project[] = [
   {
     id: 2,
     title: "Hospitality Management Dashboard",
-    description: "Advanced DAX measures.",
+    description: "",
     skills: ["powerbi", "sql", "excel"],
     icon: BarChart,
     highlights: [
