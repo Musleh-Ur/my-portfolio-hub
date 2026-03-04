@@ -310,7 +310,7 @@ const Projects = () => {
                         className="flex-1 flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium transition-all duration-300 hover:bg-primary/90 hover:scale-105 active:scale-95"
                       >
                         <ExternalLink className="w-4 h-4" />
-                        Live
+                        View Project
                       </a>
                     )}
                   </div>
