@@ -38,7 +38,7 @@ const projects: Project[] = [
   {
     id: 2,
     title: "Hospitality Management Dashboard",
-    description: "KPI-driven dashboard with multiple data source integration, custom tooltips, and calculated columns for strategic insights.",
+    description: "Advanced DAX measures.",
     skills: ["powerbi", "sql", "excel"],
     icon: BarChart,
     highlights: [
@@ -236,7 +236,7 @@ const Projects = () => {
                   {/* Project Media */}
                   {project.video && (
                     <div className="mb-4 overflow-hidden">
-                      <video src={project.video} autoPlay loop muted playsInline className="w-full h-44 object-cover object-center" />
+                      <video src={project.video} autoPlay loop muted playsInline className="w-full h-32 object-cover object-top" />
                     </div>
                   )}
                   {project.image && !project.video && (
