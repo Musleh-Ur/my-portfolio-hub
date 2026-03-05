@@ -24,8 +24,9 @@ const projects: Project[] = [
   {
     id: 1,
     title: "Bank Customer Churn Prediction",
-    description: "Machine learning project predicting customer churn using ensemble methods. Achieved 87.2% AUC-ROC with XGBoost after extensive feature engineering and hyperparameter tuning.",
-    skills: ["python", "ml", "sql"],
+    description: "",
+    skills: ["python", "ml"],
+    image: bankChurnImage,
     icon: TrendingUp,
     highlights: [
       "Customers aged 45+ were 2.1× more likely to churn",
