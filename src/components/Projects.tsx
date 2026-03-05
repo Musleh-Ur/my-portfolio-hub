@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 const hospitalityVideo = "/videos/hospitality-dashboard.mp4";
+import bankChurnImage from "@/assets/bank-churn.png";
 import { 
   ExternalLink, Github, TrendingUp, BarChart, Database, Brain, 
   FileSpreadsheet, Snowflake, Code, Table, Star 
@@ -24,8 +25,9 @@ const projects: Project[] = [
   {
     id: 1,
     title: "Bank Customer Churn Prediction",
-    description: "Machine learning project predicting customer churn using ensemble methods. Achieved 87.2% AUC-ROC with XGBoost after extensive feature engineering and hyperparameter tuning.",
-    skills: ["python", "ml", "sql"],
+    description: "",
+    skills: ["python", "ml"],
+    image: bankChurnImage,
     icon: TrendingUp,
     highlights: [
       "Customers aged 45+ were 2.1× more likely to churn",
