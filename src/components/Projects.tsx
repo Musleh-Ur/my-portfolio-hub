@@ -242,8 +242,8 @@ const Projects = () => {
                     </div>
                   )}
                   {project.image && !project.video && (
-                    <div className="mb-4 overflow-hidden rounded-lg aspect-video">
-                      <img src={project.image} alt={project.title} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+                    <div className="mb-4 overflow-hidden rounded-lg">
+                      <img src={project.image} alt={project.title} loading="lazy" decoding="async" className="w-full object-contain" />
                     </div>
                   )}
 
