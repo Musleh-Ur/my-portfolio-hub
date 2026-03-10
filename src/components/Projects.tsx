@@ -6,6 +6,7 @@ import {
   ExternalLink, Github, TrendingUp, BarChart, Database, Brain, 
   FileSpreadsheet, Snowflake, Code, Table, Star 
 } from "lucide-react";
+import PythonIcon from "@/components/icons/PythonIcon";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
 
 interface Project {
