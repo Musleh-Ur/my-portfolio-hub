@@ -6,6 +6,7 @@ import {
   ExternalLink, Github, TrendingUp, BarChart, Database, Brain, 
   FileSpreadsheet, Snowflake, Code, Table, Star 
 } from "lucide-react";
+import PythonIcon from "@/components/icons/PythonIcon";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
 
 interface Project {
@@ -86,7 +87,7 @@ const projects: Project[] = [
 
 const skillFilters = [
   { id: "all", label: "All Projects", icon: Star, color: "primary" },
-  { id: "python", label: "Python", icon: Code, color: "python" },
+  { id: "python", label: "Python", icon: PythonIcon, color: "python" },
   { id: "r", label: "R Language", icon: Table, color: "r" },
   { id: "excel", label: "Excel", icon: FileSpreadsheet, color: "excel" },
   { id: "powerbi", label: "Power BI", icon: BarChart, color: "powerbi" },
@@ -109,7 +110,7 @@ const skillColors: Record<string, { border: string; bg: string; text: string }> 
 };
 
 const skillIcons: Record<string, React.ComponentType<{ className?: string }>> = {
-  python: Code,
+  python: PythonIcon,
   r: Table,
   excel: FileSpreadsheet,
   powerbi: BarChart,
