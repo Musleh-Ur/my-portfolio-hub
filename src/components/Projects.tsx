@@ -39,6 +39,20 @@ const projects: Project[] = [
     liveUrl: "https://github.com/Musleh-Ur/Bank-Customers-Churn-Prediction-using-Machine-Learning",
   },
   {
+    id: 8,
+    title: "Time Series Analysis and Forecasting of UAN32 Fertilizer Price",
+    description: "",
+    skills: ["python", "ml"],
+    image: uan32ForecastImage,
+    icon: TrendingUp,
+    highlights: [
+      "SARIMAX model with exogenous variables for price forecasting",
+      "Achieved RMSE of 10.33 and MAE of 7.15",
+      "Incorporated seasonality, historical prices, and commodity drivers",
+    ],
+    metrics: { "RMSE": "10.33", "MAE": "7.15" },
+  },
+  {
     id: 2,
     title: "Hospitality Management Dashboard",
     description: "",
