@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 const hospitalityVideo = "/videos/hospitality-dashboard.mp4";
 import bankChurnImage from "@/assets/bank-churn.webp";
+import uan32ForecastImage from "@/assets/uan32-forecast.png";
 import { 
   ExternalLink, Github, TrendingUp, BarChart, Database, Brain, 
   FileSpreadsheet, Snowflake, Code, Table, Star 
@@ -36,6 +37,20 @@ const projects: Project[] = [
     ],
     metrics: { "AUC-ROC": "0.872", "PR-AUC": "0.534" },
     liveUrl: "https://github.com/Musleh-Ur/Bank-Customers-Churn-Prediction-using-Machine-Learning",
+  },
+  {
+    id: 8,
+    title: "Time Series Analysis and Forecasting of UAN32 Fertilizer Price",
+    description: "",
+    skills: ["python", "ml"],
+    image: uan32ForecastImage,
+    icon: TrendingUp,
+    highlights: [
+      "SARIMAX model with exogenous variables for price forecasting",
+      "Achieved RMSE of 10.33 and MAE of 7.15",
+      "Incorporated seasonality, historical prices, and commodity drivers",
+    ],
+    metrics: { "RMSE": "10.33", "MAE": "7.15" },
   },
   {
     id: 2,
