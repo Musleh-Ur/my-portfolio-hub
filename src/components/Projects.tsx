@@ -35,7 +35,7 @@ const projects: Project[] = [
       "Feature importance: Age (24%), Balance (19%), NumOfProducts (17%)",
     ],
     metrics: { "AUC-ROC": "0.872", "PR-AUC": "0.534" },
-    githubUrl: "https://github.com/",
+    liveUrl: "https://github.com/Musleh-Ur/Bank-Customers-Churn-Prediction-using-Machine-Learning",
   },
   {
     id: 2,
