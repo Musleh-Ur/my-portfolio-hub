@@ -40,7 +40,7 @@ const projects: Project[] = [
   },
   {
     id: 8,
-    title: "Time Series Analysis and Forecasting of UAN32 Fertilizer Price",
+    title: "Time Series Forecasting of UAN32 Fertilizer Price",
     description: "",
     skills: ["python", "ml"],
     image: uan32ForecastImage,
