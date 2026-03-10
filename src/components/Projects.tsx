@@ -82,33 +82,6 @@ const projects: Project[] = [
     metrics: { "Query Types": "15+", "Tables": "8" },
     githubUrl: "https://github.com/",
   },
-  {
-    id: 6,
-    title: "Financial Planning Tool",
-    description: "Developed a collaborative budgeting and financial planning tool using Excel and Google Sheets with advanced formulas and automation.",
-    skills: ["excel", "gsheets"],
-    icon: FileSpreadsheet,
-    highlights: [
-      "Automated budget calculations and forecasting",
-      "Collaborative multi-user access and editing",
-      "Dynamic charts and variance analysis",
-    ],
-    metrics: { "Formulas": "200+", "Sheets": "15" },
-  },
-  {
-    id: 7,
-    title: "Statistical Report Generator",
-    description: "Created an automated tool to generate statistical reports from survey data using R and Excel for comprehensive data processing and analysis.",
-    skills: ["r", "excel"],
-    icon: Table,
-    highlights: [
-      "Automated statistical analysis pipeline",
-      "Publication-ready report generation",
-      "Support for multiple survey formats",
-    ],
-    metrics: { "Tests": "20+", "Export Formats": "5" },
-    githubUrl: "https://github.com/",
-  },
 ];
 
 const skillFilters = [
