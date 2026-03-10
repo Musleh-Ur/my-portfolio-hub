@@ -51,6 +51,7 @@ const projects: Project[] = [
       "Incorporated seasonality, historical prices, and commodity drivers",
     ],
     metrics: { "RMSE": "10.33", "MAE": "7.15" },
+    liveUrl: "https://github.com/Musleh-Ur/TimeSeries_Forecast_of_UAN32_NOLA",
   },
   {
     id: 2,
