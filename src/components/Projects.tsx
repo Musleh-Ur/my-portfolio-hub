@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 const hospitalityVideo = "/videos/hospitality-dashboard.mp4";
 import bankChurnImage from "@/assets/bank-churn.webp";
+import uan32ForecastImage from "@/assets/uan32-forecast.png";
 import { 
   ExternalLink, Github, TrendingUp, BarChart, Database, Brain, 
   FileSpreadsheet, Snowflake, Code, Table, Star 
