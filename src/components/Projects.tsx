@@ -110,7 +110,7 @@ const skillColors: Record<string, { border: string; bg: string; text: string }> 
 };
 
 const skillIcons: Record<string, React.ComponentType<{ className?: string }>> = {
-  python: Code,
+  python: PythonIcon,
   r: Table,
   excel: FileSpreadsheet,
   powerbi: BarChart,
