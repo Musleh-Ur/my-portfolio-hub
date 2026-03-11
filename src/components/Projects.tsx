@@ -7,6 +7,7 @@ import {
   FileSpreadsheet, Snowflake, Code, Table, Star 
 } from "lucide-react";
 import PythonIcon from "@/components/icons/PythonIcon";
+import RIcon from "@/components/icons/RIcon";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
 
 interface Project {
