@@ -89,7 +89,7 @@ const projects: Project[] = [
 const skillFilters = [
   { id: "all", label: "All Projects", icon: Star, color: "primary" },
   { id: "python", label: "Python", icon: PythonIcon, color: "python" },
-  { id: "r", label: "R Language", icon: Table, color: "r" },
+  { id: "r", label: "R Language", icon: RIcon, color: "r" },
   { id: "excel", label: "Excel", icon: FileSpreadsheet, color: "excel" },
   { id: "powerbi", label: "Power BI", icon: BarChart, color: "powerbi" },
   { id: "gsheets", label: "Google Sheets", icon: Table, color: "gsheets" },
