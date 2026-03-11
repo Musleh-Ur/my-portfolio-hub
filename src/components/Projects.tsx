@@ -7,6 +7,7 @@ import {
   FileSpreadsheet, Snowflake, Code, Table, Star 
 } from "lucide-react";
 import PythonIcon from "@/components/icons/PythonIcon";
+import RIcon from "@/components/icons/RIcon";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
 
 interface Project {
@@ -88,7 +89,7 @@ const projects: Project[] = [
 const skillFilters = [
   { id: "all", label: "All Projects", icon: Star, color: "primary" },
   { id: "python", label: "Python", icon: PythonIcon, color: "python" },
-  { id: "r", label: "R Language", icon: Table, color: "r" },
+  { id: "r", label: "R Language", icon: RIcon, color: "r" },
   { id: "excel", label: "Excel", icon: FileSpreadsheet, color: "excel" },
   { id: "powerbi", label: "Power BI", icon: BarChart, color: "powerbi" },
   { id: "gsheets", label: "Google Sheets", icon: Table, color: "gsheets" },
@@ -111,7 +112,7 @@ const skillColors: Record<string, { border: string; bg: string; text: string }> 
 
 const skillIcons: Record<string, React.ComponentType<{ className?: string }>> = {
   python: PythonIcon,
-  r: Table,
+  r: RIcon,
   excel: FileSpreadsheet,
   powerbi: BarChart,
   gsheets: Table,
