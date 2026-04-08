@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 const hospitalityVideo = "/videos/hospitality-dashboard.mp4";
 const cocaColaVideo = "/videos/coca-cola-dashboard.mp4";
+const revenueInsightsVideo = "/videos/revenue-insights-hospitality.mp4";
 import bankChurnImage from "@/assets/bank-churn.webp";
 import uan32ForecastImage from "@/assets/uan32-forecast.png";
 import { 
@@ -84,6 +85,21 @@ const projects: Project[] = [
     ],
     metrics: { "Units Sold": "16M", "Total Sales": "8M" },
     video: cocaColaVideo,
+    liveUrl: "https://app.powerbi.com/",
+  },
+  {
+    id: 10,
+    title: "Revenue Insights in Hospitality Domain",
+    description: "Power BI dashboard delivering revenue insights for the hospitality sector. Built with a KPI framework, advanced DAX measures, calculated columns, interactive slicers, table relationships, and Power Query transformations—enabling intuitive filtering, cross-highlighting, and actionable decision-making.",
+    skills: ["powerbi"],
+    icon: BarChart,
+    highlights: [
+      "KPI framework with advanced DAX measures and calculated columns",
+      "Interactive slicers, cross-highlighting, and Power Query transformations",
+      "Optimized dashboard design for intuitive decision-making",
+    ],
+    metrics: { "Techniques": "6+", "Insights": "Actionable" },
+    video: revenueInsightsVideo,
     liveUrl: "https://app.powerbi.com/",
   },
   {
