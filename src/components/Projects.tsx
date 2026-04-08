@@ -72,6 +72,21 @@ const projects: Project[] = [
     liveUrl: "https://app.powerbi.com/view?r=eyJrIjoiYWExNTUxMjEtMGZkZS00NTE5LWFkNzYtOGMzMDhiNDM1ZGVhIiwidCI6IjhhNjdhOTE1LTVjYTItNDRiOS1iOGIxLTczZTZlOGIwNzg1MiIsImMiOjEwfQ%3D%3D",
   },
   {
+    id: 9,
+    title: "Coca-Cola Product Analytics Dashboard",
+    description: "Interactive Power BI dashboard analyzing Coca-Cola's 2022 product performance across brands (Coca-Cola, Dasani, Diet Coke, Fanta, Powerade, Sprite) with KPIs including 16M total units sold, $0.48 price per product, and 8M total sales. Features regional breakdowns, monthly profit trends, and retailer-level filtering.",
+    skills: ["powerbi"],
+    icon: BarChart,
+    highlights: [
+      "Multi-brand analysis with month, day, and retailer filters",
+      "Regional sales breakdown across West, Northeast, Southeast, South, Midwest",
+      "Monthly profit trend tracking with 11% and 14% month-over-month changes",
+    ],
+    metrics: { "Units Sold": "16M", "Total Sales": "8M" },
+    video: cocaColaVideo,
+    liveUrl: "https://app.powerbi.com/",
+  },
+  {
     id: 3,
     title: "College Student Database System",
     description: "Relational database design with optimized queries for academic performance reporting, featuring complex joins, CTEs, and efficient data retrieval.",
