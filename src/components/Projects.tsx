@@ -273,11 +273,6 @@ const Projects = () => {
                     )}
                   </div>
 
-                  {/* Description */}
-                  <p className="text-muted-foreground text-sm mb-4 leading-relaxed line-clamp-3 min-h-[3.75rem]">
-                    {project.description}
-                  </p>
-
                   {/* Skill Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.skills.map((skill) => {
@@ -293,6 +288,11 @@ const Projects = () => {
                       );
                     })}
                   </div>
+
+                  {/* Description */}
+                  <p className="text-muted-foreground text-sm mb-4 leading-relaxed line-clamp-3 min-h-[3.75rem]">
+                    {project.description}
+                  </p>
 
                   {/* Highlights */}
                   <ul className="space-y-1.5 mb-4">
