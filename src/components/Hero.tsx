@@ -23,9 +23,7 @@ const Hero = () => {
               <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-primary/30">
                 <img
                   src={profilePhoto}
-                  alt="Musleh-Ur Rahman - Data Scientist & Analytics Professional"
-                  width={320}
-                  height={320}
+                  alt="Musleh-Ur Rahman"
                   className="w-full h-full object-cover object-top scale-110"
                 />
               </div>
