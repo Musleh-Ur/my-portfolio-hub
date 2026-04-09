@@ -244,14 +244,14 @@ const Projects = () => {
           {visibleProjects.map((project, index) => (
             <AnimatedSection key={project.id} animation="fade-up" delay={index * 100}>
               <div
-                className="group relative p-6 rounded-2xl bg-gradient-card border border-border/50 hover:border-primary/30 transition-all duration-500 hover:shadow-glow hover:-translate-y-2 active:scale-[0.98] overflow-hidden"
+                className="group relative p-6 rounded-2xl bg-gradient-card border border-border/50 hover:border-primary/30 transition-all duration-500 hover:shadow-glow hover:-translate-y-2 active:scale-[0.98] overflow-hidden h-full flex flex-col"
               >
                 {/* Background accent */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2 group-hover:bg-primary/10 group-hover:w-40 group-hover:h-40 transition-all duration-700" />
                 
-                <div className="relative z-10">
+                <div className="relative z-10 flex flex-col flex-1">
                   {/* Header */}
-                  <div className="flex items-start gap-3 mb-4">
+                  <div className="flex items-start gap-3 mb-4 min-h-[3.5rem]">
                     <div className="p-2.5 rounded-lg bg-primary/10 text-primary flex-shrink-0 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
                       <project.icon className="w-5 h-5" />
                     </div>
@@ -259,19 +259,22 @@ const Projects = () => {
                   </div>
                   
                   {/* Project Media */}
-                  {project.video && (
-                    <div className="mb-4 overflow-hidden rounded-lg">
-                      <video src={project.video} autoPlay loop muted playsInline className="w-full object-contain" />
-                    </div>
-                  )}
-                  {project.image && !project.video && (
-                    <div className="mb-4 overflow-hidden rounded-lg">
-                      <img src={project.image} alt={project.title} loading="lazy" decoding="async" className="w-full object-contain" />
-                    </div>
-                  )}
+                  <div className="mb-4 overflow-hidden rounded-lg aspect-video bg-secondary/30">
+                    {project.video && (
+                      <video src={project.video} autoPlay loop muted playsInline className="w-full h-full object-cover" />
+                    )}
+                    {project.image && !project.video && (
+                      <img src={project.image} alt={project.title} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+                    )}
+                    {!project.video && !project.image && (
+                      <div className="w-full h-full flex items-center justify-center">
+                        <project.icon className="w-12 h-12 text-muted-foreground/30" />
+                      </div>
+                    )}
+                  </div>
 
                   {/* Description */}
-                  <p className="text-muted-foreground text-sm mb-4 leading-relaxed line-clamp-3">
+                  <p className="text-muted-foreground text-sm mb-4 leading-relaxed line-clamp-3 min-h-[3.75rem]">
                     {project.description}
                   </p>
 
