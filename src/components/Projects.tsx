@@ -296,17 +296,12 @@ const Projects = () => {
                     })}
                   </div>
 
-                  {/* Description */}
-                  <p className="text-muted-foreground text-sm mb-4 leading-relaxed line-clamp-3 min-h-[3.75rem]">
-                    {project.description}
-                  </p>
-
-                  {/* Highlights */}
-                  <ul className="space-y-1.5 mb-4">
-                    {project.highlights.slice(0, 2).map((highlight, i) => (
+                  {/* Highlights (description as bullets) */}
+                  <ul className="space-y-1.5 mb-4 min-h-[6.5rem]">
+                    {project.highlights.map((highlight, i) => (
                       <li key={i} className="flex items-start gap-2 text-xs text-muted-foreground">
                         <span className="w-1 h-1 rounded-full bg-primary mt-1.5 flex-shrink-0" />
-                        <span className="line-clamp-1">{highlight}</span>
+                        <span className="leading-relaxed">{highlight}</span>
                       </li>
                     ))}
                   </ul>
