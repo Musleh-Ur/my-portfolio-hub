@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, ExternalLink } from "lucide-react";
+import { Github, Linkedin, Mail, ExternalLink, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import profilePhoto from "@/assets/profile-photo.png";
 
@@ -82,8 +82,9 @@ const Hero = () => {
                 </a>
               </Button>
               <Button variant="glow" size="lg" asChild>
-                <a href="#education">
-                  About Me
+                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                  <FileText className="w-4 h-4" />
+                  Download Resume
                 </a>
               </Button>
             </div>

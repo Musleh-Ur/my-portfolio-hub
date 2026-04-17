@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navItems = [
@@ -50,9 +50,15 @@ const Navbar = () => {
           </ul>
 
           {/* CTA */}
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center gap-3">
+            <Button variant="glow" size="sm" asChild>
+              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                <FileText className="w-4 h-4" />
+                Resume
+              </a>
+            </Button>
             <Button variant="hero" size="sm" asChild>
-              <a href="#marketplace">Hire Me</a>
+              <a href="#contact">Hire Me</a>
             </Button>
           </div>
 
@@ -81,8 +87,16 @@ const Navbar = () => {
                 </li>
               ))}
               <li>
+                <Button variant="glow" size="sm" className="w-full" asChild>
+                  <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                    <FileText className="w-4 h-4" />
+                    Resume
+                  </a>
+                </Button>
+              </li>
+              <li>
                 <Button variant="hero" size="sm" className="w-full" asChild>
-                  <a href="#marketplace">Hire Me</a>
+                  <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>Hire Me</a>
                 </Button>
               </li>
             </ul>
