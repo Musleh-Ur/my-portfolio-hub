@@ -116,20 +116,6 @@ const projects: Project[] = [
     video: revenueInsightsVideo,
     liveUrl: "https://app.powerbi.com/",
   },
-  {
-    id: 3,
-    title: "College Student Database System",
-    description: "Relational database design with optimized queries for academic performance reporting, featuring complex joins, CTEs, and efficient data retrieval.",
-    skills: ["sql", "excel"],
-    icon: Database,
-    highlights: [
-      "Designed normalized relational database schema",
-      "Implemented complex joins, subqueries, and CTEs",
-      "Optimized query performance for large datasets",
-    ],
-    metrics: { "Query Types": "15+", "Tables": "8" },
-    githubUrl: "https://github.com/",
-  },
 ];
 
 const skillFilters = [
