@@ -268,13 +268,13 @@ const Projects = () => {
                   {/* Project Media */}
                   <div className="mb-4 overflow-hidden rounded-xl aspect-video bg-secondary/30">
                     {project.video && (
-                      <video src={project.video} autoPlay loop muted playsInline className="w-full h-full object-contain rounded-xl" />
+                      <video src={project.video} autoPlay loop muted playsInline className="w-full h-full object-cover rounded-xl" />
                     )}
                     {project.image && !project.video && (
                       <img src={project.image} alt={project.title} loading="lazy" decoding="async" className="w-full h-full object-cover rounded-xl" />
                     )}
                     {!project.video && !project.image && (
-                      <div className="w-full h-full flex items-center justify-center">
+                      <div className="w-full h-full flex items-center justify-center rounded-xl">
                         <project.icon className="w-12 h-12 text-muted-foreground/30" />
                       </div>
                     )}
