@@ -30,7 +30,7 @@ const projects: Project[] = [
   {
     id: 1,
     title: "Bank Customer Churn Prediction",
-    description: "",
+    description: "Machine learning model identifying customers at risk of churn using demographic and account features. Delivers actionable retention insights for banking strategy.",
     skills: ["python", "ml"],
     image: bankChurnImage,
     icon: TrendingUp,
@@ -45,7 +45,7 @@ const projects: Project[] = [
   {
     id: 8,
     title: "Time Series Forecasting of UAN32 Fertilizer Price",
-    description: "",
+    description: "SARIMAX-based time series model forecasting UAN32 fertilizer prices using seasonality, historical trends, and exogenous commodity drivers for procurement planning.",
     skills: ["python", "ml"],
     image: uan32ForecastImage,
     icon: TrendingUp,
@@ -58,9 +58,23 @@ const projects: Project[] = [
     liveUrl: "https://github.com/Musleh-Ur/TimeSeries_Forecast_of_UAN32_NOLA",
   },
   {
+    id: 11,
+    title: "Transaction Fraud Detection Web App",
+    description: "End-to-end ML web app built with Python, Streamlit, and Logistic Regression that predicts fraudulent transactions in real time—bridging data science and interactive user experience for fintech use cases.",
+    skills: ["python", "ml"],
+    icon: Brain,
+    highlights: [
+      "End-to-end ML pipeline using Logistic Regression",
+      "Real-time prediction via interactive Streamlit interface",
+      "Built with pandas, scikit-learn, numpy, joblib, and scipy",
+    ],
+    metrics: { "Model": "LogReg", "Stack": "Streamlit" },
+    liveUrl: "https://github.com/Musleh-Ur/Fraud-Detection-Prediction-App",
+  },
+  {
     id: 2,
     title: "Hospitality Management Dashboard",
-    description: "",
+    description: "KPI-driven Power BI dashboard integrating multiple data sources with advanced DAX measures, custom tooltips, and calculated columns to surface strategic hospitality insights.",
     skills: ["powerbi", "sql", "excel"],
     icon: BarChart,
     highlights: [
