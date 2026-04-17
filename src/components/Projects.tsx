@@ -4,6 +4,7 @@ const cocaColaVideo = "/videos/coca-cola-dashboard.mp4";
 const revenueInsightsVideo = "/videos/revenue-insights-hospitality.mp4";
 import bankChurnImage from "@/assets/bank-churn.webp";
 import uan32ForecastImage from "@/assets/uan32-forecast.png";
+import fraudDetectionImage from "@/assets/fraud-detection.jpg";
 import { 
   ExternalLink, Github, TrendingUp, BarChart, Database, Brain, 
   FileSpreadsheet, Snowflake, Code, Table, Star 
@@ -30,14 +31,15 @@ const projects: Project[] = [
   {
     id: 1,
     title: "Bank Customer Churn Prediction",
-    description: "Machine learning model identifying customers at risk of churn using demographic and account features. Delivers actionable retention insights for banking strategy.",
+    description: "",
     skills: ["python", "ml"],
     image: bankChurnImage,
     icon: TrendingUp,
     highlights: [
+      "ML model predicting at-risk banking customers",
       "Customers aged 45+ were 2.1× more likely to churn",
-      "31% churn among €100k+ balance vs 9% for zero-balance",
-      "Feature importance: Age (24%), Balance (19%), NumOfProducts (17%)",
+      "31% churn for €100k+ balances vs 9% for zero",
+      "Top features: Age (24%), Balance (19%), Products (17%)",
     ],
     metrics: { "AUC-ROC": "0.872", "PR-AUC": "0.534" },
     liveUrl: "https://github.com/Musleh-Ur/Bank-Customers-Churn-Prediction-using-Machine-Learning",
@@ -45,14 +47,14 @@ const projects: Project[] = [
   {
     id: 8,
     title: "Time Series Forecasting of UAN32 Fertilizer Price",
-    description: "SARIMAX-based time series model forecasting UAN32 fertilizer prices using seasonality, historical trends, and exogenous commodity drivers for procurement planning.",
+    description: "",
     skills: ["python", "ml"],
     image: uan32ForecastImage,
     icon: TrendingUp,
     highlights: [
-      "SARIMAX model with exogenous variables for price forecasting",
+      "SARIMAX model forecasting UAN32 fertilizer prices",
       "Achieved RMSE of 10.33 and MAE of 7.15",
-      "Incorporated seasonality, historical prices, and commodity drivers",
+      "Used seasonality, history & commodity drivers",
     ],
     metrics: { "RMSE": "10.33", "MAE": "7.15" },
     liveUrl: "https://github.com/Musleh-Ur/TimeSeries_Forecast_of_UAN32_NOLA",
@@ -60,13 +62,15 @@ const projects: Project[] = [
   {
     id: 11,
     title: "Transaction Fraud Detection Web App",
-    description: "End-to-end ML web app built with Python, Streamlit, and Logistic Regression that predicts fraudulent transactions in real time—bridging data science and interactive user experience for fintech use cases.",
+    description: "",
     skills: ["python", "ml"],
+    image: fraudDetectionImage,
     icon: Brain,
     highlights: [
+      "Real-time fraud prediction Streamlit web app",
       "End-to-end ML pipeline using Logistic Regression",
-      "Real-time prediction via interactive Streamlit interface",
-      "Built with pandas, scikit-learn, numpy, joblib, and scipy",
+      "Built with pandas, scikit-learn, numpy & joblib",
+      "Deployable for fintech risk & analytics use cases",
     ],
     metrics: { "Model": "LogReg", "Stack": "Streamlit" },
     liveUrl: "https://github.com/Musleh-Ur/Fraud-Detection-Prediction-App",
@@ -74,13 +78,14 @@ const projects: Project[] = [
   {
     id: 2,
     title: "Hospitality Management Dashboard",
-    description: "KPI-driven Power BI dashboard integrating multiple data sources with advanced DAX measures, custom tooltips, and calculated columns to surface strategic hospitality insights.",
+    description: "",
     skills: ["powerbi", "sql", "excel"],
     icon: BarChart,
     highlights: [
-      "KPI-driven dashboard with multiple data source integration",
-      "Advanced DAX measures improved reporting efficiency by 25%",
-      "Custom tooltips and calculated columns for strategic insights",
+      "KPI-driven Power BI dashboard for hospitality",
+      "Integrated 5+ data sources with advanced DAX",
+      "Improved reporting efficiency by 25%",
+      "Custom tooltips & calculated columns for insights",
     ],
     metrics: { "Efficiency": "+25%", "Data Sources": "5+" },
     video: hospitalityVideo,
@@ -89,13 +94,14 @@ const projects: Project[] = [
   {
     id: 9,
     title: "Coca-Cola Product Analytics Dashboard",
-    description: "Interactive Power BI dashboard analyzing Coca-Cola's 2022 product performance across brands (Coca-Cola, Dasani, Diet Coke, Fanta, Powerade, Sprite) with KPIs including 16M total units sold, $0.48 price per product, and 8M total sales. Features regional breakdowns, monthly profit trends, and retailer-level filtering.",
+    description: "",
     skills: ["powerbi"],
     icon: BarChart,
     highlights: [
-      "Multi-brand analysis with month, day, and retailer filters",
-      "Regional sales breakdown across West, Northeast, Southeast, South, Midwest",
-      "Monthly profit trend tracking with 11% and 14% month-over-month changes",
+      "Power BI dashboard analyzing 2022 Coca-Cola sales",
+      "Multi-brand view with retailer & date filters",
+      "Regional breakdowns across 5 US territories",
+      "Tracks monthly profit trends & MoM changes",
     ],
     metrics: { "Units Sold": "16M", "Total Sales": "8M" },
     video: cocaColaVideo,
@@ -104,13 +110,14 @@ const projects: Project[] = [
   {
     id: 10,
     title: "Revenue Insights in Hospitality Domain",
-    description: "Power BI dashboard delivering revenue insights for the hospitality sector. Built with a KPI framework, advanced DAX measures, calculated columns, interactive slicers, table relationships, and Power Query transformations—enabling intuitive filtering, cross-highlighting, and actionable decision-making.",
+    description: "",
     skills: ["powerbi"],
     icon: BarChart,
     highlights: [
-      "KPI framework with advanced DAX measures and calculated columns",
-      "Interactive slicers, cross-highlighting, and Power Query transformations",
-      "Optimized dashboard design for intuitive decision-making",
+      "Hospitality revenue insights via Power BI",
+      "KPI framework with advanced DAX measures",
+      "Interactive slicers & Power Query transformations",
+      "Optimized for cross-highlighting & decisions",
     ],
     metrics: { "Techniques": "6+", "Insights": "Actionable" },
     video: revenueInsightsVideo,
@@ -289,17 +296,12 @@ const Projects = () => {
                     })}
                   </div>
 
-                  {/* Description */}
-                  <p className="text-muted-foreground text-sm mb-4 leading-relaxed line-clamp-3 min-h-[3.75rem]">
-                    {project.description}
-                  </p>
-
-                  {/* Highlights */}
-                  <ul className="space-y-1.5 mb-4">
-                    {project.highlights.slice(0, 2).map((highlight, i) => (
+                  {/* Highlights (description as bullets) */}
+                  <ul className="space-y-1.5 mb-4 min-h-[6.5rem]">
+                    {project.highlights.map((highlight, i) => (
                       <li key={i} className="flex items-start gap-2 text-xs text-muted-foreground">
                         <span className="w-1 h-1 rounded-full bg-primary mt-1.5 flex-shrink-0" />
-                        <span className="line-clamp-1">{highlight}</span>
+                        <span className="leading-relaxed">{highlight}</span>
                       </li>
                     ))}
                   </ul>
