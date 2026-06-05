@@ -35,6 +35,7 @@ const Hero = () => {
                 href="https://github.com/Musleh-Ur"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="GitHub"
                 className="p-4 rounded-xl bg-secondary hover:bg-secondary/80 text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
               >
                 <Github className="w-7 h-7" />
@@ -43,12 +44,14 @@ const Hero = () => {
                 href="https://www.linkedin.com/in/musleh-urrahman"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn"
                 className="p-4 rounded-xl bg-secondary hover:bg-secondary/80 text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
               >
                 <Linkedin className="w-7 h-7" />
               </a>
               <a
                 href="mailto:rahmanmuslehur0@gmail.com"
+                aria-label="Email"
                 className="p-4 rounded-xl bg-secondary hover:bg-secondary/80 text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
               >
                 <Mail className="w-7 h-7" />
@@ -63,6 +66,7 @@ const Hero = () => {
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-up opacity-0" style={{ animationDelay: "0.2s" }}>
               Musleh-Ur <span className="text-gradient">Rahman</span>
+              <span className="sr-only"> — Data Scientist & Analytics Professional</span>
             </h1>
             <h2 className="text-xl md:text-2xl text-muted-foreground font-medium mb-6 animate-fade-up opacity-0" style={{ animationDelay: "0.3s" }}>
               Data Scientist & Analytics Professional
