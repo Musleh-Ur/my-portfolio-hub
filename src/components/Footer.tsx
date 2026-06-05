@@ -23,6 +23,7 @@ const Footer = () => {
                 href="https://github.com/Musleh-Ur"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="GitHub"
                 className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-secondary hover:scale-110 active:scale-95 transition-all duration-300"
               >
                 <Github className="w-5 h-5" />
@@ -31,12 +32,14 @@ const Footer = () => {
                 href="https://www.linkedin.com/in/musleh-urrahman"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn"
                 className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-secondary hover:scale-110 active:scale-95 transition-all duration-300"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
                 href="mailto:rahmanmuslehur0@gmail.com"
+                aria-label="Email"
                 className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-secondary hover:scale-110 active:scale-95 transition-all duration-300"
               >
                 <Mail className="w-5 h-5" />
