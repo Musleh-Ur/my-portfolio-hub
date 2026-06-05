@@ -247,9 +247,9 @@ const Projects = () => {
         </AnimatedSection>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr">
           {visibleProjects.map((project, index) => (
-            <AnimatedSection key={project.id} animation="fade-up" delay={index * 100}>
+            <AnimatedSection key={project.id} animation="fade-up" delay={index * 100} className="h-full">
               <div
                 className="group relative p-6 rounded-2xl bg-gradient-card border border-border/50 hover:border-primary/30 transition-all duration-500 hover:shadow-glow hover:-translate-y-2 active:scale-[0.98] overflow-hidden h-full flex flex-col"
               >
@@ -306,43 +306,46 @@ const Projects = () => {
                     ))}
                   </ul>
 
-                  {/* Metrics */}
-                  <div className="flex gap-3 mb-4 mt-auto">
-                    {Object.entries(project.metrics).map(([label, value]) => (
-                      <div
-                        key={label}
-                        className="flex-1 p-2.5 rounded-lg bg-secondary/50 border border-border/50 text-center group-hover:border-primary/20 transition-colors duration-300"
-                      >
-                        <p className="text-lg font-bold text-gradient">{value}</p>
-                        <p className="text-[10px] text-muted-foreground uppercase tracking-wider">{label}</p>
-                      </div>
-                    ))}
-                  </div>
+                  {/* Bottom block: metrics + buttons pushed to card bottom */}
+                  <div className="mt-auto">
+                    {/* Metrics */}
+                    <div className="flex gap-3 mb-4">
+                      {Object.entries(project.metrics).map(([label, value]) => (
+                        <div
+                          key={label}
+                          className="flex-1 p-2.5 rounded-lg bg-secondary/50 border border-border/50 text-center group-hover:border-primary/20 transition-colors duration-300"
+                        >
+                          <p className="text-lg font-bold text-gradient">{value}</p>
+                          <p className="text-[10px] text-muted-foreground uppercase tracking-wider">{label}</p>
+                        </div>
+                      ))}
+                    </div>
 
-                  {/* Action Buttons */}
-                  <div className="flex gap-2">
-                    {project.githubUrl && (
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex-1 flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-secondary hover:bg-secondary/80 text-sm font-medium transition-all duration-300 hover:scale-105 active:scale-95"
-                      >
-                        <Github className="w-4 h-4" />
-                        Code
-                      </a>
-                    )}
-                    {project.liveUrl && (
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex-1 flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium transition-all duration-300 hover:bg-primary/90 hover:scale-105 active:scale-95"
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                        View Project
-                      </a>
-                    )}
+                    {/* Action Buttons */}
+                    <div className="flex gap-2">
+                      {project.githubUrl && (
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-secondary hover:bg-secondary/80 text-sm font-medium transition-all duration-300 hover:scale-105 active:scale-95"
+                        >
+                          <Github className="w-4 h-4" />
+                          Code
+                        </a>
+                      )}
+                      {project.liveUrl && (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium transition-all duration-300 hover:bg-primary/90 hover:scale-105 active:scale-95"
+                        >
+                          <ExternalLink className="w-4 h-4" />
+                          View Project
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
