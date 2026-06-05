@@ -1,0 +1,11 @@
+# Musleh-Ur Rahman
+
+> Portfolio of Musleh-Ur Rahman — Data Scientist & Analytics Professional based in Pabna, Bangladesh. Showcases skills, projects, education, and contact details.
+
+## Pages
+
+- [Home](/): Overview, hero introduction, and navigation to all sections.
+- [Skills](/#skills): Tools and technologies including Python, R, SQL, and Power BI.
+- [Projects](/#projects): Featured data science and analytics project case studies.
+- [Education](/#education): Academic background and certifications.
+- [Contact](/#contact): Email, phone, social links, and freelance marketplace profiles.
