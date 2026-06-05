@@ -281,7 +281,7 @@ const Projects = () => {
                   </div>
 
                   {/* Skill Tags */}
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="flex flex-wrap gap-2 mb-4 min-h-[2rem] content-start">
                     {project.skills.map((skill) => {
                       const SkillIcon = skillIcons[skill];
                       return (
@@ -297,7 +297,7 @@ const Projects = () => {
                   </div>
 
                   {/* Highlights (description as bullets) */}
-                  <ul className="space-y-1.5 mb-4 min-h-[6.5rem]">
+                  <ul className="space-y-1.5 mb-4 min-h-[7.5rem]">
                     {project.highlights.map((highlight, i) => (
                       <li key={i} className="flex items-start gap-2 text-xs text-muted-foreground">
                         <span className="w-1 h-1 rounded-full bg-primary mt-1.5 flex-shrink-0" />
@@ -307,7 +307,7 @@ const Projects = () => {
                   </ul>
 
                   {/* Metrics */}
-                  <div className="flex gap-3 mb-4">
+                  <div className="flex gap-3 mb-4 mt-auto">
                     {Object.entries(project.metrics).map(([label, value]) => (
                       <div
                         key={label}
