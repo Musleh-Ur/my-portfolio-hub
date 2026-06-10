@@ -71,11 +71,11 @@ const Skills = () => {
         </AnimatedSection>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr">
           {skills.map((skill, index) => (
-            <AnimatedSection key={skill.category} animation="fade-up" delay={index * 100}>
+            <AnimatedSection key={skill.category} animation="fade-up" delay={index * 100} className="h-full">
               <div
-                className={`group relative p-6 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50 ${skill.borderColor} transition-all duration-500 hover:shadow-lg hover:-translate-y-2 active:scale-[0.98] cursor-default`}
+                className={`group relative p-6 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50 ${skill.borderColor} transition-all duration-500 hover:shadow-lg hover:-translate-y-2 active:scale-[0.98] cursor-default h-full flex flex-col`}
               >
                 {/* Gradient background on hover */}
                 <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${skill.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
