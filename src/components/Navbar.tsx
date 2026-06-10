@@ -90,7 +90,7 @@ const Navbar = () => {
               ))}
               <li>
                 <Button variant="glow" size="sm" className="w-full" asChild>
-                  <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                  <a href="/resume.pdf" download="Musleh-Ur-Rahman-Resume.pdf" target="_blank" rel="noopener noreferrer">
                     <FileText className="w-4 h-4" />
                     Resume
                   </a>
