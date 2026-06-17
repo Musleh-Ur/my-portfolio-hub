@@ -221,10 +221,10 @@ const Projects = () => {
                   onClick={() => setActiveSkill(skill.id)}
                   className={`
                     group relative px-3 py-2 md:px-5 md:py-2.5 rounded-xl font-medium text-xs md:text-sm
-                    flex items-center gap-1.5 md:gap-2 transition-all duration-300
-                    border-2 ${colors.border} active:scale-95
-                    ${isActive 
-                      ? `${colors.bg} text-background shadow-lg scale-105` 
+                    flex items-center justify-center gap-1.5 md:gap-2 transition-all duration-300
+                    border-2 ${colors.border} active:scale-95 min-w-[120px] md:min-w-[150px]
+                    ${isActive
+                      ? `${colors.bg} text-background shadow-lg scale-105`
                       : `bg-secondary/50 ${colors.text} hover:bg-secondary hover:scale-105`
                     }
                   `}
