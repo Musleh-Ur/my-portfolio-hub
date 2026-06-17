@@ -105,7 +105,7 @@ const projects: Project[] = [
     ],
     metrics: { "Units Sold": "16M", "Total Sales": "8M" },
     video: cocaColaVideo,
-    liveUrl: "https://app.powerbi.com/",
+    liveUrl: "https://app.powerbi.com/view?r=eyJrIjoiM2NhZTgwMDAtZWRiMC00YTMwLTlhMDgtODgzNjg2MjVmNzMyIiwidCI6IjhhNjdhOTE1LTVjYTItNDRiOS1iOGIxLTczZTZlOGIwNzg1MiIsImMiOjEwfQ%3D%3D",
   },
   {
     id: 10,
@@ -121,7 +121,7 @@ const projects: Project[] = [
     ],
     metrics: { "Techniques": "6+", "Insights": "Actionable" },
     video: revenueInsightsVideo,
-    liveUrl: "https://app.powerbi.com/",
+    liveUrl: "https://app.powerbi.com/view?r=eyJrIjoiYzI5MDUwYjItYWQwYy00MzQwLWIyZTQtY2UwYzAzODA0Y2I3IiwidCI6IjhhNjdhOTE1LTVjYTItNDRiOS1iOGIxLTczZTZlOGIwNzg1MiIsImMiOjEwfQ%3D%3D",
   },
 ];
 
