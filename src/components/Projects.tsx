@@ -61,7 +61,7 @@ const projects: Project[] = [
   },
   {
     id: 11,
-    title: "Transaction Fraud Detection Web App",
+    title: "Transaction Fraud Detection Web App using Machine Learning",
     description: "",
     skills: ["python", "ml"],
     image: fraudDetectionImage,
