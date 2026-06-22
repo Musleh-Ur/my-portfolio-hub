@@ -29,7 +29,7 @@ const Footer = () => {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="https://www.linkedin.com/in/musleh-urrahman"
+                href="https://www.linkedin.com/in/musleh-ur-rahman-a4b9b525a"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"

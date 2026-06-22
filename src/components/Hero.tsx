@@ -41,7 +41,7 @@ const Hero = () => {
                 <Github className="w-7 h-7" />
               </a>
               <a
-                href="https://www.linkedin.com/in/musleh-urrahman"
+                href="https://www.linkedin.com/in/musleh-ur-rahman-a4b9b525a"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
