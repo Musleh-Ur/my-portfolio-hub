@@ -33,6 +33,10 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open("https://www.linkedin.com/in/musleh-ur-rahman-a4b9b525a", "_blank", "noopener,noreferrer");
+                }}
                 className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-secondary hover:scale-110 active:scale-95 transition-all duration-300"
               >
                 <Linkedin className="w-5 h-5" />
