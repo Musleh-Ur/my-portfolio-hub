@@ -41,13 +41,13 @@ const Hero = () => {
                 <Github className="w-7 h-7" />
               </a>
               <a
-                href="https://www.linkedin.com/in/musleh-ur-rahman-a4b9b525a"
+                href="https://www.linkedin.com/in/musleh-urrahman"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
                 onClick={(e) => {
                   e.preventDefault();
-                  window.open("https://www.linkedin.com/in/musleh-ur-rahman-a4b9b525a", "_blank", "noopener,noreferrer");
+                  window.open("https://www.linkedin.com/in/musleh-urrahman", "_blank", "noopener,noreferrer");
                 }}
                 className="p-4 rounded-xl bg-secondary hover:bg-secondary/80 text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
               >
