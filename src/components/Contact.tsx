@@ -73,7 +73,7 @@ const Contact = () => {
                 </a>
               </Button>
               <Button variant="glow" size="lg" asChild className="hover:scale-105 active:scale-95 transition-transform duration-200">
-                <a href="https://www.linkedin.com/in/musleh-ur-rahman-a4b9b525a" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/musleh-ur-rahman-a4b9b525a" target="_blank" rel="noopener noreferrer" onClick={(e) => { e.preventDefault(); window.open("https://www.linkedin.com/in/musleh-ur-rahman-a4b9b525a", "_blank", "noopener,noreferrer"); }}>
                   <Linkedin className="w-5 h-5" />
                   LinkedIn
                 </a>

@@ -45,6 +45,10 @@ const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open("https://www.linkedin.com/in/musleh-ur-rahman-a4b9b525a", "_blank", "noopener,noreferrer");
+                }}
                 className="p-4 rounded-xl bg-secondary hover:bg-secondary/80 text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
               >
                 <Linkedin className="w-7 h-7" />
