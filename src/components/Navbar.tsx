@@ -52,7 +52,7 @@ const Navbar = () => {
           {/* CTA */}
           <div className="hidden md:flex items-center gap-3">
             <Button variant="glow" size="sm" asChild>
-              <a href="/resume.pdf" download="Musleh-Ur-Rahman-Resume.pdf" target="_blank" rel="noopener noreferrer">
+              <a href="/resume.pdf" download="Musleh-Ur-Rahman-Resume.pdf">
                 <FileText className="w-4 h-4" />
                 Resume
               </a>
