@@ -1,6 +1,22 @@
+import type { MouseEvent } from "react";
 import { Github, Linkedin, Mail, ExternalLink, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import profilePhoto from "@/assets/profile-photo.png";
+
+const openExternalProfile = (url: string) => (event: MouseEvent<HTMLAnchorElement>) => {
+  event.preventDefault();
+
+  try {
+    if (window.top && window.top !== window.self) {
+      window.top.location.assign(url);
+      return;
+    }
+  } catch {
+    // Fall back to a regular browser navigation if the preview frame blocks top navigation.
+  }
+
+  window.open(url, "_blank", "noopener,noreferrer") ?? window.location.assign(url);
+};
 
 const Hero = () => {
   return (
@@ -45,10 +61,7 @@ const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.open("https://www.linkedin.com/in/musleh-urrahman", "_blank", "noopener,noreferrer");
-                }}
+                onClick={openExternalProfile("https://www.linkedin.com/in/musleh-urrahman")}
                 className="p-4 rounded-xl bg-secondary hover:bg-secondary/80 text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
               >
                 <Linkedin className="w-7 h-7" />
