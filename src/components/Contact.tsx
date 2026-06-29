@@ -73,7 +73,7 @@ const Contact = () => {
                 </a>
               </Button>
               <Button variant="glow" size="lg" asChild className="hover:scale-105 active:scale-95 transition-transform duration-200">
-                <a href="https://www.linkedin.com/in/musleh-urrahman" target="_top" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/musleh-urrahman" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="w-5 h-5" />
                   LinkedIn
                 </a>
@@ -108,7 +108,7 @@ const Contact = () => {
                 </a>
                 <a
                   href="https://www.upwork.com/freelancers/~0115331acc900d5fc4?mp_source=share"
-                  target="_top"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-card border border-border/50 hover:border-[#14a800]/40 transition-all duration-300 hover:shadow-[0_0_20px_rgba(20,168,0,0.15)] hover:-translate-y-1 active:scale-95"
                 >
