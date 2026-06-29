@@ -1,5 +1,21 @@
+import type { MouseEvent } from "react";
 import { Github, Linkedin, Mail, Heart } from "lucide-react";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
+
+const openExternalProfile = (url: string) => (event: MouseEvent<HTMLAnchorElement>) => {
+  event.preventDefault();
+
+  try {
+    if (window.top && window.top !== window.self) {
+      window.top.location.assign(url);
+      return;
+    }
+  } catch {
+    // Fall back to a regular browser navigation if the preview frame blocks top navigation.
+  }
+
+  window.open(url, "_blank", "noopener,noreferrer") ?? window.location.assign(url);
+};
 
 const Footer = () => {
   return (
@@ -33,10 +49,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.open("https://www.linkedin.com/in/musleh-urrahman", "_blank", "noopener,noreferrer");
-                }}
+                onClick={openExternalProfile("https://www.linkedin.com/in/musleh-urrahman")}
                 className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-secondary hover:scale-110 active:scale-95 transition-all duration-300"
               >
                 <Linkedin className="w-5 h-5" />
