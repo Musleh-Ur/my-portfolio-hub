@@ -73,7 +73,7 @@ const Contact = () => {
                 </a>
               </Button>
               <Button variant="glow" size="lg" asChild className="hover:scale-105 active:scale-95 transition-transform duration-200">
-                <a href="https://www.linkedin.com/in/musleh-urrahman" target="_top" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/musleh-urrahman" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="w-5 h-5" />
                   LinkedIn
                 </a>
