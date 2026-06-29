@@ -30,7 +30,7 @@ const Footer = () => {
               </a>
               <a
                 href="https://www.linkedin.com/in/musleh-urrahman"
-                target="_top"
+                target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
                 className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-secondary hover:scale-110 active:scale-95 transition-all duration-300"
