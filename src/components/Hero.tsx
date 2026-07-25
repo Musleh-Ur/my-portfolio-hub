@@ -1,6 +1,9 @@
 import { Github, Linkedin, Mail, ExternalLink, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import profilePhoto from "@/assets/profile-photo.png";
+import { openExternalProfile } from "@/lib/externalLinks";
+
+const linkedInUrl = "https://www.linkedin.com/in/musleh-urrahman/";
 
 const Hero = () => {
   return (
@@ -41,10 +44,11 @@ const Hero = () => {
                 <Github className="w-7 h-7" />
               </a>
               <a
-                href="https://www.linkedin.com/in/musleh-urrahman"
+                href={linkedInUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
+                onClick={openExternalProfile(linkedInUrl)}
                 className="p-4 rounded-xl bg-secondary hover:bg-secondary/80 text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
               >
                 <Linkedin className="w-7 h-7" />

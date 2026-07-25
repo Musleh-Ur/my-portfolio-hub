@@ -2,6 +2,10 @@ import { Mail, MapPin, Phone, Github, Linkedin } from "lucide-react";
 import fiverrLogo from "@/assets/fiverr-logo.png";
 import { Button } from "@/components/ui/button";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
+import { openExternalProfile } from "@/lib/externalLinks";
+
+const linkedInUrl = "https://www.linkedin.com/in/musleh-urrahman/";
+const upworkUrl = "https://www.upwork.com/freelancers/~0115331acc900d5fc4?mp_source=share";
 
 const Contact = () => {
   return (
@@ -73,7 +77,7 @@ const Contact = () => {
                 </a>
               </Button>
               <Button variant="glow" size="lg" asChild className="hover:scale-105 active:scale-95 transition-transform duration-200">
-                <a href="https://www.linkedin.com/in/musleh-urrahman" target="_blank" rel="noopener noreferrer">
+                <a href={linkedInUrl} target="_blank" rel="noopener noreferrer" onClick={openExternalProfile(linkedInUrl)}>
                   <Linkedin className="w-5 h-5" />
                   LinkedIn
                 </a>
@@ -107,9 +111,10 @@ const Contact = () => {
                   <span className="font-medium text-muted-foreground group-hover:text-foreground transition-colors">Fiverr</span>
                 </a>
                 <a
-                  href="https://www.upwork.com/freelancers/~0115331acc900d5fc4?mp_source=share"
+                  href={upworkUrl}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={openExternalProfile(upworkUrl)}
                   className="group flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-card border border-border/50 hover:border-[#14a800]/40 transition-all duration-300 hover:shadow-[0_0_20px_rgba(20,168,0,0.15)] hover:-translate-y-1 active:scale-95"
                 >
                   <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">

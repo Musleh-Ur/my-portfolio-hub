@@ -1,5 +1,8 @@
 import { Github, Linkedin, Mail, Heart } from "lucide-react";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
+import { openExternalProfile } from "@/lib/externalLinks";
+
+const linkedInUrl = "https://www.linkedin.com/in/musleh-urrahman/";
 
 const Footer = () => {
   return (
@@ -29,10 +32,11 @@ const Footer = () => {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="https://www.linkedin.com/in/musleh-urrahman"
+                href={linkedInUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
+                onClick={openExternalProfile(linkedInUrl)}
                 className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-secondary hover:scale-110 active:scale-95 transition-all duration-300"
               >
                 <Linkedin className="w-5 h-5" />
