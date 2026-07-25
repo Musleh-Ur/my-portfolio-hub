@@ -77,7 +77,7 @@ const Contact = () => {
                 </a>
               </Button>
               <Button variant="glow" size="lg" asChild className="hover:scale-105 active:scale-95 transition-transform duration-200">
-                <a href={linkedInUrl} target="_blank" rel="noopener noreferrer" onClick={openExternalProfile(linkedInUrl)}>
+                <a href={linkedInUrl} target="_blank" rel="noopener noreferrer" onClick={openExternalProfile(linkedInUrl, "LinkedIn")}>
                   <Linkedin className="w-5 h-5" />
                   LinkedIn
                 </a>
