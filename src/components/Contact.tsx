@@ -114,7 +114,7 @@ const Contact = () => {
                   href={upworkUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={openExternalProfile(upworkUrl)}
+                  onClick={openExternalProfile(upworkUrl, "Upwork")}
                   className="group flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-card border border-border/50 hover:border-[#14a800]/40 transition-all duration-300 hover:shadow-[0_0_20px_rgba(20,168,0,0.15)] hover:-translate-y-1 active:scale-95"
                 >
                   <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
