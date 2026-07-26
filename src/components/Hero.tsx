@@ -70,10 +70,10 @@ const Hero = () => {
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-up opacity-0" style={{ animationDelay: "0.2s" }}>
               Musleh-Ur <span className="text-gradient">Rahman</span>
-              <span className="sr-only"> — Data Scientist & Analytics Professional</span>
+              <span className="sr-only"> — Data Scientist & Analytics Enthusiast</span>
             </h1>
             <h2 className="text-xl md:text-2xl text-muted-foreground font-medium mb-6 animate-fade-up opacity-0" style={{ animationDelay: "0.3s" }}>
-              Data Scientist & Analytics Professional
+              Data Scientist & Analytics Enthusiast
             </h2>
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-8 text-justify animate-fade-up opacity-0" style={{ animationDelay: "0.4s" }}>
               Transforming complex data into actionable insights through machine learning, 
