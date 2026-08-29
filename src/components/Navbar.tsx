@@ -1,25 +1,41 @@
-import { useState, useEffect } from "react";
-import { Menu, X, FileText } from "lucide-react";
+import { useCallback, useEffect, useState } from "react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ResumeButton from "@/components/ResumeButton";
 
-const navItems = [
+const NAV_ITEMS = [
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Education", href: "#education" },
   { label: "Contact", href: "#contact" },
-];
+] as const;
+
+const SCROLL_THRESHOLD = 50;
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  // rAF-throttled, passive scroll listener — avoids layout thrash on every scroll event.
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        setIsScrolled(window.scrollY > SCROLL_THRESHOLD);
+        ticking = false;
+      });
     };
-    window.addEventListener("scroll", handleScroll);
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const closeMobileMenu = useCallback(() => setIsMobileMenuOpen(false), []);
+  const toggleMobileMenu = useCallback(() => setIsMobileMenuOpen((open) => !open), []);
 
   return (
     <header
@@ -28,15 +44,15 @@ const Navbar = () => {
       }`}
     >
       <div className="section-container">
-        <nav className="flex items-center justify-between">
+        <nav className="flex items-center justify-between" aria-label="Main navigation">
           {/* Logo */}
-          <a href="#" className="text-xl font-bold">
+          <a href="#" className="text-xl font-bold" aria-label="Back to top">
             <span className="text-gradient">MR</span>
           </a>
 
           {/* Desktop Nav */}
           <ul className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => (
+            {NAV_ITEMS.map((item) => (
               <li key={item.label}>
                 <a
                   href={item.href}
@@ -51,12 +67,7 @@ const Navbar = () => {
 
           {/* CTA */}
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="glow" size="sm" asChild>
-              <a href="/resume.pdf" download="Musleh-Ur-Rahman-Resume.pdf">
-                <FileText className="w-4 h-4" />
-                Resume
-              </a>
-            </Button>
+            <ResumeButton />
             <Button variant="hero" size="sm" asChild>
               <a href="#contact">Hire Me</a>
             </Button>
@@ -64,7 +75,8 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            type="button"
+            onClick={toggleMobileMenu}
             aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={isMobileMenuOpen}
             className="md:hidden p-2 text-muted-foreground hover:text-primary"
@@ -77,11 +89,11 @@ const Navbar = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 p-4 rounded-xl glass animate-fade-in">
             <ul className="space-y-4">
-              {navItems.map((item) => (
+              {NAV_ITEMS.map((item) => (
                 <li key={item.label}>
                   <a
                     href={item.href}
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={closeMobileMenu}
                     className="block text-muted-foreground hover:text-primary transition-colors"
                   >
                     {item.label}
@@ -89,16 +101,13 @@ const Navbar = () => {
                 </li>
               ))}
               <li>
-                <Button variant="glow" size="sm" className="w-full" asChild>
-                  <a href="/resume.pdf" download="Musleh-Ur-Rahman-Resume.pdf">
-                    <FileText className="w-4 h-4" />
-                    Resume
-                  </a>
-                </Button>
+                <ResumeButton className="w-full" />
               </li>
               <li>
                 <Button variant="hero" size="sm" className="w-full" asChild>
-                  <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>Hire Me</a>
+                  <a href="#contact" onClick={closeMobileMenu}>
+                    Hire Me
+                  </a>
                 </Button>
               </li>
             </ul>

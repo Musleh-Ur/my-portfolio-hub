@@ -1,9 +1,29 @@
-import { Github, Linkedin, Mail, ExternalLink, FileText } from "lucide-react";
+import { Github, Linkedin, Mail, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ResumeButton from "@/components/ResumeButton";
 import profilePhoto from "@/assets/profile-photo.png";
 import { openExternalProfile } from "@/lib/externalLinks";
+import { PROFILE } from "@/data/profile";
 
-const linkedInUrl = "https://www.linkedin.com/in/musleh-urrahman/";
+const SOCIAL_LINKS = [
+  {
+    label: "GitHub",
+    href: PROFILE.links.github,
+    icon: Github,
+  },
+  {
+    label: "LinkedIn",
+    href: PROFILE.links.linkedin,
+    icon: Linkedin,
+    onClick: openExternalProfile(PROFILE.links.linkedin, "LinkedIn"),
+  },
+  {
+    label: "Email",
+    href: `mailto:${PROFILE.email}`,
+    icon: Mail,
+    external: false,
+  },
+] as const;
 
 const Hero = () => {
   return (
@@ -26,77 +46,77 @@ const Hero = () => {
               <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-primary/30">
                 <img
                   src={profilePhoto}
-                  alt="Musleh-Ur Rahman"
+                  alt={PROFILE.name}
                   className="w-full h-full object-cover object-top scale-110"
                 />
               </div>
             </div>
-            
+
             {/* Social Links - Below Picture */}
-            <div className="flex gap-5 mt-8 animate-fade-up opacity-0" style={{ animationDelay: "0.6s" }}>
-              <a
-                href="https://github.com/Musleh-Ur"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-                className="p-4 rounded-xl bg-secondary hover:bg-secondary/80 text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
-              >
-                <Github className="w-7 h-7" />
-              </a>
-              <a
-                href={linkedInUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                onClick={openExternalProfile(linkedInUrl, "LinkedIn")}
-                className="p-4 rounded-xl bg-secondary hover:bg-secondary/80 text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
-              >
-                <Linkedin className="w-7 h-7" />
-              </a>
-              <a
-                href="mailto:rahmanmuslehur0@gmail.com"
-                aria-label="Email"
-                className="p-4 rounded-xl bg-secondary hover:bg-secondary/80 text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
-              >
-                <Mail className="w-7 h-7" />
-              </a>
+            <div
+              className="flex gap-5 mt-8 animate-fade-up opacity-0"
+              style={{ animationDelay: "0.6s" }}
+            >
+              {SOCIAL_LINKS.map(({ label, href, icon: Icon, ...rest }) => (
+                <a
+                  key={label}
+                  href={href}
+                  aria-label={label}
+                  {...("external" in rest && !rest.external
+                    ? {}
+                    : { target: "_blank", rel: "noopener noreferrer" })}
+                  {...("onClick" in rest ? { onClick: rest.onClick } : {})}
+                  className="p-4 rounded-xl bg-secondary hover:bg-secondary/80 text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
+                >
+                  <Icon className="w-7 h-7" />
+                </a>
+              ))}
             </div>
           </div>
 
           {/* Content */}
           <div className="text-center lg:text-left max-w-2xl">
-            <p className="text-primary font-mono text-sm md:text-base mb-4 animate-fade-up opacity-0" style={{ animationDelay: "0.1s" }}>
+            <p
+              className="text-primary font-mono text-sm md:text-base mb-4 animate-fade-up opacity-0"
+              style={{ animationDelay: "0.1s" }}
+            >
               Hello, I'm
             </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-up opacity-0" style={{ animationDelay: "0.2s" }}>
+            <h1
+              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-up opacity-0"
+              style={{ animationDelay: "0.2s" }}
+            >
               Musleh-Ur <span className="text-gradient">Rahman</span>
-              <span className="sr-only"> — Data Scientist & Analytics Enthusiast</span>
+              <span className="sr-only"> — {PROFILE.title}</span>
             </h1>
-            <h2 className="text-xl md:text-2xl text-muted-foreground font-medium mb-6 animate-fade-up opacity-0" style={{ animationDelay: "0.3s" }}>
-              Data Scientist & Analytics Enthusiast
+            <h2
+              className="text-xl md:text-2xl text-muted-foreground font-medium mb-6 animate-fade-up opacity-0"
+              style={{ animationDelay: "0.3s" }}
+            >
+              {PROFILE.title}
             </h2>
-            <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-8 text-justify animate-fade-up opacity-0" style={{ animationDelay: "0.4s" }}>
-              Transforming complex data into actionable insights through machine learning, 
-              statistical modeling, and interactive visualizations. Passionate about driving 
+            <p
+              className="text-muted-foreground text-base md:text-lg leading-relaxed mb-8 text-justify animate-fade-up opacity-0"
+              style={{ animationDelay: "0.4s" }}
+            >
+              Transforming complex data into actionable insights through machine learning,
+              statistical modeling, and interactive visualizations. Passionate about driving
               data-driven decision making.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8 animate-fade-up opacity-0" style={{ animationDelay: "0.5s" }}>
+            <div
+              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8 animate-fade-up opacity-0"
+              style={{ animationDelay: "0.5s" }}
+            >
               <Button variant="hero" size="lg" asChild>
                 <a href="#projects">
                   View Projects
                   <ExternalLink className="w-4 h-4" />
                 </a>
               </Button>
-              <Button variant="glow" size="lg" asChild>
-                <a href="/resume.pdf" download="Musleh-Ur-Rahman-Resume.pdf">
-                  <FileText className="w-4 h-4" />
-                  Download Resume
-                </a>
-              </Button>
+              <ResumeButton size="lg" label="Download Resume" />
             </div>
-
           </div>
         </div>
       </div>
