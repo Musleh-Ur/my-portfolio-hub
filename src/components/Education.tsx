@@ -1,40 +1,7 @@
 import { GraduationCap, Award, Calendar, ExternalLink } from "lucide-react";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
-import juLogo from "@/assets/ju-logo.png";
-import kuLogo from "@/assets/ku-logo.png";
+import { EDUCATION, CERTIFICATIONS } from "@/data/education";
 
-const education = [
-  {
-    degree: "Masters in Applied Statistics and Data Science",
-    institution: "Jahangirnagar University",
-    logo: juLogo,
-    coursework: ["Advanced Statistical Modeling", "Data Visualization", "Machine Learning"],
-  },
-  {
-    degree: "B.Sc. (Hons) in Statistics",
-    institution: "Khulna University",
-    logo: kuLogo,
-    coursework: ["Regression Analysis", "Hypothesis Testing", "Probability Theory"],
-  },
-];
-
-const certifications = [
-  {
-    name: "Python for Data Science, AI & Development",
-    issuer: "Coursera",
-    certLink: "https://www.coursera.org/account/accomplishments/verify/NRMVP944643Q",
-  },
-  {
-    name: "Data Analytics and Power BI Career Path",
-    issuer: "Interactive Cares",
-    certLink: "https://interactivecares.com/certificate/4b3b5cb6-c44f-4902-aaca-df672488aec5",
-  },
-  {
-    name: "SQL (Basic) Certification",
-    issuer: "HackerRank",
-    certLink: "https://www.hackerrank.com/certificates/iframe/246059605df4",
-  },
-];
 
 const Education = () => {
   return (
@@ -60,7 +27,7 @@ const Education = () => {
             </div>
 
             <div className="space-y-6">
-              {education.map((edu, index) => (
+              {EDUCATION.map((edu, index) => (
                 <AnimatedSection key={edu.degree} animation="fade-up" delay={index * 150}>
                   <div
                     className="relative pl-20 before:absolute before:left-16 before:top-8 before:w-3 before:h-3 before:bg-primary before:rounded-full before:shadow-glow after:absolute after:left-[4.375rem] after:top-11 after:w-px after:h-[calc(100%-20px)] after:bg-border last:after:hidden group"
@@ -98,7 +65,7 @@ const Education = () => {
             </div>
 
             <div className="space-y-4">
-              {certifications.map((cert, index) => (
+              {CERTIFICATIONS.map((cert, index) => (
                 <AnimatedSection key={cert.name} animation="fade-up" delay={index * 150}>
                   <div
                     className="p-5 rounded-xl bg-gradient-card border border-border/50 hover:border-primary/30 transition-all duration-300 group hover:-translate-y-1 hover:shadow-glow"
