@@ -3,9 +3,9 @@ import fiverrLogo from "@/assets/fiverr-logo.png";
 import { Button } from "@/components/ui/button";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
 import { openExternalProfile } from "@/lib/externalLinks";
+import { PROFILE } from "@/data/profile";
 
-const linkedInUrl = "https://www.linkedin.com/in/musleh-urrahman/";
-const upworkUrl = "https://www.upwork.com/freelancers/~0115331acc900d5fc4?mp_source=share";
+const { email, phone, location, links } = PROFILE;
 
 const Contact = () => {
   return (
@@ -29,7 +29,7 @@ const Contact = () => {
             {/* Email */}
             <AnimatedSection animation="fade-up" delay={0}>
               <a
-                href="mailto:rahmanmuslehur0@gmail.com"
+                href={`mailto:${email}`}
                 className="group p-6 rounded-xl bg-gradient-card border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-glow hover:-translate-y-1 active:scale-[0.98] block"
               >
                 <div className="flex items-center gap-4">
@@ -39,7 +39,7 @@ const Contact = () => {
                   <div>
                     <p className="text-sm text-muted-foreground mb-1">Email</p>
                     <p className="font-medium text-sm group-hover:text-primary transition-colors">
-                      rahmanmuslehur0@gmail.com
+                      {email}
                     </p>
                   </div>
                 </div>
@@ -49,7 +49,7 @@ const Contact = () => {
             {/* Phone */}
             <AnimatedSection animation="fade-up" delay={100}>
               <a
-                href="tel:+8801760928867"
+                href={phone.tel}
                 className="group p-6 rounded-xl bg-gradient-card border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-glow hover:-translate-y-1 active:scale-[0.98] block"
               >
                 <div className="flex items-center gap-4">
@@ -59,7 +59,7 @@ const Contact = () => {
                   <div>
                     <p className="text-sm text-muted-foreground mb-1">Phone</p>
                     <p className="font-medium text-sm group-hover:text-primary transition-colors">
-                      +880-1760-928867
+                      {phone.display}
                     </p>
                   </div>
                 </div>
@@ -71,19 +71,19 @@ const Contact = () => {
           <AnimatedSection animation="fade-up" delay={200}>
             <div className="flex justify-center gap-4 mb-12">
               <Button variant="glow" size="lg" asChild className="hover:scale-105 active:scale-95 transition-transform duration-200">
-                <a href="https://github.com/Musleh-Ur" target="_blank" rel="noopener noreferrer">
+                <a href={links.github} target="_blank" rel="noopener noreferrer">
                   <Github className="w-5 h-5" />
                   GitHub
                 </a>
               </Button>
               <Button variant="glow" size="lg" asChild className="hover:scale-105 active:scale-95 transition-transform duration-200">
-                <a href={linkedInUrl} target="_blank" rel="noopener noreferrer" onClick={openExternalProfile(linkedInUrl, "LinkedIn")}>
+                <a href={links.linkedin} target="_blank" rel="noopener noreferrer" onClick={openExternalProfile(links.linkedin, "LinkedIn")}>
                   <Linkedin className="w-5 h-5" />
                   LinkedIn
                 </a>
               </Button>
               <Button variant="glow" size="lg" asChild className="hover:scale-105 active:scale-95 transition-transform duration-200">
-                <a href="https://wa.me/8801760928867" target="_blank" rel="noopener noreferrer">
+                <a href={phone.whatsapp} target="_blank" rel="noopener noreferrer">
                   <Phone className="w-5 h-5" />
                   WhatsApp
                 </a>
@@ -102,7 +102,7 @@ const Contact = () => {
               </div>
               <div className="flex justify-center gap-4">
                 <a
-                  href="https://www.fiverr.com/muslehurrahman?public_mode=true"
+                  href={links.fiverr}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-card border border-border/50 hover:border-[#1dbf73]/40 transition-all duration-300 hover:shadow-[0_0_20px_rgba(29,191,115,0.15)] hover:-translate-y-1 active:scale-95"
@@ -111,10 +111,10 @@ const Contact = () => {
                   <span className="font-medium text-muted-foreground group-hover:text-foreground transition-colors">Fiverr</span>
                 </a>
                 <a
-                  href={upworkUrl}
+                  href={links.upwork}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={openExternalProfile(upworkUrl, "Upwork")}
+                  onClick={openExternalProfile(links.upwork, "Upwork")}
                   className="group flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-card border border-border/50 hover:border-[#14a800]/40 transition-all duration-300 hover:shadow-[0_0_20px_rgba(20,168,0,0.15)] hover:-translate-y-1 active:scale-95"
                 >
                   <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
@@ -135,7 +135,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground mb-1">Location</p>
-                  <p className="font-medium">Pabna, Bangladesh</p>
+                  <p className="font-medium">{location}</p>
                 </div>
               </div>
             </div>

@@ -1,8 +1,9 @@
 import { Github, Linkedin, Mail, Heart } from "lucide-react";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
 import { openExternalProfile } from "@/lib/externalLinks";
+import { PROFILE } from "@/data/profile";
 
-const linkedInUrl = "https://www.linkedin.com/in/musleh-urrahman/";
+const { name, email, links } = PROFILE;
 
 const Footer = () => {
   return (
@@ -13,7 +14,7 @@ const Footer = () => {
             {/* Logo & Copyright */}
             <div className="text-center md:text-left">
               <p className="text-xl font-bold mb-2">
-                <span className="text-gradient">Musleh-Ur Rahman</span>
+                <span className="text-gradient">{name}</span>
               </p>
               <p className="text-sm text-muted-foreground">
                 © {new Date().getFullYear()} All rights reserved.
@@ -23,7 +24,7 @@ const Footer = () => {
             {/* Social Links */}
             <div className="flex items-center gap-4">
               <a
-                href="https://github.com/Musleh-Ur"
+                href={links.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
@@ -32,17 +33,17 @@ const Footer = () => {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href={linkedInUrl}
+                href={links.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                onClick={openExternalProfile(linkedInUrl, "LinkedIn")}
+                onClick={openExternalProfile(links.linkedin, "LinkedIn")}
                 className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-secondary hover:scale-110 active:scale-95 transition-all duration-300"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="mailto:rahmanmuslehur0@gmail.com"
+                href={`mailto:${email}`}
                 aria-label="Email"
                 className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-secondary hover:scale-110 active:scale-95 transition-all duration-300"
               >

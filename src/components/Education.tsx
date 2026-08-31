@@ -1,4 +1,4 @@
-import { GraduationCap, Award, Calendar, ExternalLink } from "lucide-react";
+import { GraduationCap, Award, ExternalLink } from "lucide-react";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
 import { EDUCATION, CERTIFICATIONS } from "@/data/education";
 
