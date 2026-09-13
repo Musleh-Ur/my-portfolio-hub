@@ -1,7 +1,7 @@
 /** Single source of truth for personal/profile constants. */
 export const PROFILE = {
   name: "Musleh-Ur Rahman",
-  title: "Data Scientist & Analytics Enthusiast",
+  title: "Data Science & Analytics Enthusiast",
   email: "rahmanmuslehur0@gmail.com",
   phone: {
     display: "+880-1760-928867",
